@@ -33,7 +33,7 @@ object RecipeData {
                 "150 g Blockchoklad",
                 "300 g Smör",
                 "125 g Florsocker (ca 2,1 dl)",
-                "6,5 dl mjölk"
+                "6,5 dl Mjölk"
             ),
             ingredientsHalf = listOf(),
             instructions = "Rör ner 100g av smöret med sockret. Blanda i mjöl och den hackade blockchokladen. Blanda i resten av smöret.\n" +
@@ -121,7 +121,7 @@ object RecipeData {
                 "200 g Kycklingfärs",
                 "3 dl Riven ost",
                 "8 Tortillas",
-                "1 burk Tacosås",
+                "1 Burk tacosås",
                 "2 dl Créme fraiche"
             ),
             ingredientsHalf = listOf(),
@@ -143,7 +143,7 @@ object RecipeData {
                 "3 dl Mjölk",
                 "0,5 tsk Salt",
                 "0,5 krm Svartpeppar",
-                "7-8 skivor Bröd"
+                "7-8 Skivor bröd"
             ),
             ingredientsHalf = listOf(),
             instructions = "Blanda alla ingredienser utom brödet.\n" +
@@ -288,9 +288,9 @@ object RecipeData {
             ingredientsWhole = listOf(
                 "2 kokta Ägg",
                 "100 g Kallrökt lax",
-                "1 Röd lök",
+                "1 Rödlök",
                 "0,5 dl hackad Dill",
-                "hackad Gräslök",
+                "Hackad gräslök",
                 "Peppar",
                 "Gräddfill (efter smak)"
             ),
@@ -347,7 +347,7 @@ object RecipeData {
             showUpOnRandom = false,
             halfAvailable = false,
             ingredientsWhole = listOf(
-                "0,25 paket Jäst (färsk eller torr)",
+                "0,25 Paket jäst (färsk eller torr)",
                 "5 dl Kallt vatten",
                 "5 dl Rägsikt",
                 "7 dl Vetemjöl special",
@@ -399,7 +399,7 @@ object RecipeData {
             ingredientsWhole = listOf(
                 "100 g Smör",
                 "3 dl Socker",
-                "2 ägg",
+                "2 Ägg",
                 "1,5 dl Vetemjöl",
                 "4 msk Kakao",
                 "1 tsk Vaniljsockar",
@@ -417,7 +417,7 @@ object RecipeData {
             showUpOnRandom = false,
             halfAvailable = false,
             ingredientsWhole = listOf(
-                "2 ägg",
+                "2 Ägg",
                 "3 dl Socker",
                 "1,5 tsk Vaniljsocker",
                 "1 krm Salt",
@@ -452,7 +452,7 @@ object RecipeData {
                 "75 g smör",
                 "2 dl Socker",
                 "0,75 dl Vispgrädde",
-                "1,5 dl Ljussirap",
+                "1,5 dl Ljus sirap",
                 "200 g Riven kokos"
             ),
             ingredientsHalf = listOf(),
@@ -515,7 +515,7 @@ object RecipeData {
                 "100 g Rumstempererat smör",
                 "1 dl Strösocker",
                 "1 msk Vaniljsocker",
-                "2 msk Ljussirap",
+                "2 msk Ljus sirap",
                 "2,5 dl Vetemjöl",
                 "1 tsk Bakpulver"
             ),
@@ -576,7 +576,7 @@ object RecipeData {
             showUpOnRandom = true,
             halfAvailable = false,
             ingredientsWhole = listOf(
-                "2 ägg",
+                "2 Ägg",
                 "3 dl Socker",
                 "3 dl Mjölk",
                 "6 dl Vetemjöl",
@@ -725,20 +725,954 @@ object RecipeData {
                     "Grädda i ugnen i 45 minuter.",
         ),
         Recipe(
-            id = 200,
-            name = "Pannkakor",
+            id = 33,
+            name = "Kycklingröra till bakpotatis",
             showUpOnRandom = true,
             halfAvailable = false,
             ingredientsWhole = listOf(
+                "2 dl Majonnäs",
+                "2 msk Gräddfil eller créme fraiche",
+                "100 g Kyckling",
+                "0,25 Purjolök",
+                "0,5 Röd paprika",
+                "1 tsk Curry",
+                "Salt",
+                "Peppar"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Blanda gräddfil och majonnäs. Skär purjolöken och paprikan i mindre bitar, blanda i.\n" +
+                    "Tillsätt kycklingbitar och krydda med curry, salt och peppar.",
+        ),
+        Recipe(
+            id = 34,
+            name = "Kycklingwok",
+            showUpOnRandom = true,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "1 Kycklingfilé/person",
+                "Nudlar",
+                "Matolja",
+                "Curry",
+                "Grädde",
+                "Sweet chili sås",
+                "Wokgrönsaker"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Hetta upp olja i en wokpanna och blanda i curry.\n" +
+                    "Dela kycklingen i bitar och stek dem i wokpannan.\n" +
+                    "Häll i wokgrönsakerna och låt dem stekas med kycklingen. Koka nudlarna under tiden.\n" +
+                    "Häll i sweet chili sås och grädde.\n" +
+                    "Smaka av och häll sedan i nudlarna.",
+        ),
+        Recipe(
+            id = 35,
+            name = "Lättlagad fläskfilé",
+            showUpOnRandom = true,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "500 g Fläskfilé",
+                "200 g Bacon",
+                "2 msk Tomatpuré",
+                "3 dl Vispgrädde",
+                "2 dl Créme fraiche",
+                "Salt",
+                "Svartpeppar"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Stek fläskfilén i skivor, tärna baconet och lägg den tillsammans med fläskfilén. Krydda med salt och peppar.\n" +
+                    "Tillsätt tomatpuré, grädde och créme fraiche. Låt alltsammans puttra i ca 20 minuter.\n" +
+                    "Servera med pressad potatis.",
+        ),
+        Recipe(
+            id = 36,
+            name = "Lax och spenatpaj",
+            showUpOnRandom = true,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "Pajdeg",
+                "4 dl Vetemjöl",
+                "125 g Smör",
+                "1 Ägg",
+                "2 msk Vatten\n",
+                "Fyllning",
+                "200 g Bladspenat",
+                "2 dl Strimlad purjolök",
+                "200 g Kallrökt lax",
+                "3 Ägg",
+                "3 dl Grädde eller mjölk",
+                "0,5 tsk Salt",
+                "2 krm Svartpeppar",
+                "0,5 dl Finhackad dill",
+                "4 dl Riven ost"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Gör pajdegan och tryck ut i formen, förgrädda i 200 grader ca 10 minuter.\n" +
+                    "Fräs spenaten tillsammans med purjolöken i en kastrull, fördela i pajskalet.\n" +
+                    "Strimla laxen och fördela i pajskalet.\n" +
+                    "Vispa ihop ägg, grädde, kryddor och dill, häll över pajen.\n" +
+                    "Grädda i 200 grader i ca 25 minuter eller tills pajen fått fin färg.\n" +
+                    "Servera gärna med sallad och créme fraiche.",
+        ),
+        Recipe(
+            id = 37,
+            name = "Laxrätt",
+            showUpOnRandom = true,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "8 Frysta laxfiléer",
+                "Salt",
+                "Citronpeppar",
+                "1,5 dl Vatten",
+                "5 dl Créme fraiche",
+                "3 dl Matlagningsgrädde",
+                "4 msk Hummerfond",
+                "2 msk Fransk senap",
+                "Klippt dill"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Lägg laxfiléerna i en form, salta och pappra, låt ligga i ca 2 timmar.\n" +
+                    "Koka upp vatten, créme fraiche, grädde, hummerfond, senap och dill.\n" +
+                    "Häll såsen över laxen.\n" +
+                    "Sätt in i ugnen i på 200-225 grader i ca 15 minuter.",
+        ),
+        Recipe(
+            id = 38,
+            name = "Limelax med örttäcke",
+            showUpOnRandom = true,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "1 kg Benfri lax utan skinn",
+                "1 tsk Salt",
+                "2 krm Vitpeppar\n",
+                "Kryddtäcke",
+                "1 dl Hackad dill, citronmeliss, timjan & dragon (behöver ej alla)",
+                "4 Skivor vitt bröd",
+                "2 dl Riven ost",
+                "2 msk Smält smör",
+                "1 Lime\n",
+                "Sås",
+                "4 dl Créme fraiche",
+                "0,5 dl Torr sherry",
+                "2 msk Kyclingfond konserverad",
+                "Salt",
+                "Vitpeppar",
+                "0,5 tsk Strösocker"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Skär laxen i portionsbitar, salta och peppra.\n" +
+                    "Mixa örterna i en matberedare, tillsätt brödet i bitar, ost och smör. Mixa till en massa.\n" +
+                    "Tillsätt saft och skal från limen.\n" +
+                    "Bred massan över laxen och tillaga mitt i ugnen på 225 grader i ca 20 minuter.\n" +
+                    "Blanda créme fraiche, sherry och fond i en kastrull. Låt koka upp och smaka av med salt, peppar och socker.\n" +
+                    "Servera med kokt potatis och sallad.",
+        ),
+        Recipe(
+            id = 39,
+            name = "Makaronipudding",
+            showUpOnRandom = true,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "4 dl Makaroner",
+                "1 Paket bacon",
+                "1 Gul lök eller purjolök\n",
+                "Äggstanning",
+                "3 Ägg",
+                "6 dl Mjölk",
+                "1 tsk Salt",
+                "1 krm Svartpeppar",
+                "2 dl Riven ost"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Koka makaronerna, strimla baconet och hacka löken. Blanda allt och lägg i en ugnsäker form.\n" +
+                    "Häll över äggstanningen.\n" +
+                    "Grädda mitt i ugnen i 30-40 minuter på 200 grader.",
+        ),
+        Recipe(
+            id = 40,
+            name = "Mangochutneykyckling",
+            showUpOnRandom = true,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "5 Kycklingfiléer",
+                "Salt",
+                "Svartpeppar",
+                "1 msk Smör",
+                "3 dl Vispgrädde",
+                "2 msk Mangochutney"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Strimla och bruyn filéerna, salta och peppra.\n" +
+                    "Blanda ihop grädde och mangochutney.\n" +
+                    "Häll över blandningen över filéerna och låt koka ihop i några minuter.\n" +
+                    "Servera med ris, banan och mandariner.",
+        ),
+        Recipe(
+            id = 41,
+            name = "Mörk chokladmousse",
+            showUpOnRandom = false,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "200 g Mörk choklad",
+                "2 Äggulor",
+                "2 msk Strösocker",
+                "2 dl Vispgrädde",
+                "1 dl Créme fraiche"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Smält chokladen i vattenbad.\n" +
+                    "Vispa äggulor och socker poröst.\n" +
+                    "Vispa ihop grädde och créme fraiche.\n" +
+                    "Blanda chokladen med äggsmeten.\n" +
+                    "Vänd i gräddfraichen i chokladen lite i taget.\n" +
+                    "Höll upp i önskad form.\n" +
+                    "Ställ kallt tills den ska serveras.",
+        ),
+        Recipe(
+            id = 42,
+            name = "Morotsrulltårta",
+            showUpOnRandom = false,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "Tårtbotten",
+                "2 Ägg",
+                "2 dl Socker",
+                "2 dl Vetemjöl",
+                "1 tsk Vaniljsocker",
+                "1 tsk Kanel",
+                "1 tsk Bikarbonat",
+                "1 tsk Bakpulver",
+                "0,5 dl Rapsolja",
+                "2 dl Rivna morötter\n",
+                "Cream cheese fyllning",
+                "50 g Smör",
+                "1 dl Florsocker",
+                "1 tsk Vaniljsocker",
+                "200 g Kall cream chese (Philadelphia)"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Vispa smöret i 2-3 minuter. Blanda ner florsocker och vaniljsocker, vispa någon mer minut.\n" +
+                    "Vänd i cream cheese och vispa till styv frosting. Övervispa ej!\n" +
+                    "\n" +
+                    "Sätt ugnen på 200 grader (varmluft). Börja med tårtbotten. Vispa ägg och socker poröst.\n" +
+                    "Blanda de torra ingredienserna i en annan bunke och vänd försiktigt ner dem i äggfluffet.\n" +
+                    "Vänd ner morötterna och oljan i smeten.\n" +
+                    "Bred ut smeten på en plåt med bakplåtspapper.\n" +
+                    "Baka i mitten av ugnen i ca 5 minuter, tills kakan är genombakad.\n" +
+                    "Ta ut kakan ur ugnen, vänd den uppochner på ett sockrat bakplåtspapper.\n" +
+                    "Ta bort det bakade bakade bakplåtspappret och låt kakan svalna helt.\n" +
+                    "Bred sedan på fyllningen och rulla ihop.\n" +
+                    "Kakan är godast kall och håller flera dagar i kylen.",
+        ),
+        Recipe(
+            id = 43,
+            name = "Pannkakor Malins",
+            showUpOnRandom = true,
+            halfAvailable = true,
+            ingredientsWhole = listOf(
+                "6 ägg",
+                "6 dl Vetemjöl",
+                "1 l Mjölk",
+                "1 tsk Salt",
+                "50 g Smör"
+            ),
+            ingredientsHalf = listOf(
                 "3 ägg",
-                "3dl mjöl",
-                "6dl mjölk"
+                "3 dl Vetemjöl",
+                "5 dl Mjölk",
+                "0,5 tsk Salt",
+                "25 g Smör"
+            ),
+            instructions = "Vispa ihop allt",
+        ),
+        Recipe(
+            id = 44,
+            name = "Pannkakor Jonatans",
+            showUpOnRandom = true,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "4 ägg",
+                "1 tsk Salt",
+                "1 dl Socker",
+                "6 dl Mjölk",
+                "8 dl Vetemjöl",
+                "50 g Smör"
             ),
             ingredientsHalf = listOf(),
             instructions = "Vispa ihop allt",
         ),
         Recipe(
-            id = 300,
+            id = 45,
+            name = "Pasta chicken primavera",
+            showUpOnRandom = true,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "2-3 Vitlöksklyftor",
+                "2 Kycklingfiléer",
+                "250 g Sparris",
+                "200 g Cocktailtomater",
+                "120 g Strimlad morot",
+                "1 tsk Peppar",
+                "1 tsk Salt",
+                "400 g Pasta",
+                "110 g Riven parmesan",
+                "2 dl Créme fraiche"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Strimla kycklingen, dela sparrisen och tomaterna i bitar. Undre tiden koka pastan.\n" +
+                    "Stek kycklingen med vitlöken tills den är genomstekt.\n" +
+                    "Lägg i sparrisen, tomat, morot och stek tillsammans i ca 2 minuter. Salta och peppra.\n" +
+                    "Tillsätt parmesan, créme fraiche och pasta. Rör om tills osten har smält.",
+        ),
+        Recipe(
+            id = 46,
+            name = "Pasta med kyckling och soltorkade tomater",
+            showUpOnRandom = true,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "300 g Pasta",
+                "600 g Kycklingfilé",
+                "2 Vitlöksklyftor",
+                "250 g Soltorkade tomater",
+                "1 Broccolistång",
+                "1,5 dl Créme fraiche",
+                "125 g Babyspanet",
+                "250 g Kalamataoliver",
+                "Salt",
+                "Peppar"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Skär kycklingen i bitar. Skala vitlöken, hacka den eller pressa den direkt i grytan senare.\n" +
+                    "Mixa tomaterna och oliverna. Skär broccolin i mindre bitar, även stjälken.\n" +
+                    "Koka pastan enligt nvisningar, lägg i broccolin när det är ca 2 minuter kvar av koktiden eller koka den i egen gryta.\n" +
+                    "Stek kycklingen i olja, krydda med salt och pappar. Tillsätt vitlöken, tomaterna och oliverna. Låt fräsa i ett par minuter.\n" +
+                    "Rör ner créme fraiche och spenaten. Låt sjuda i ca 3 minuter.\n" +
+                    "Häll av pasta och broccoli, men spara 1-2dl av vattnet.\n" +
+                    "Blanda ner pastan och broccolin i kycklinggrytan. Späd med kokvattnet till önskad krämig konstistens.",
+        ),
+        Recipe(
+            id = 47,
+            name = "Pastasås med lax och kräftstjärtar",
+            showUpOnRandom = true,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "1 Gul lök",
+                "1 msk Olja",
+                "2,5 dl Grädde",
+                "1 msk Fiskfond (från flaska)",
+                "0,5 Citron",
+                "100 g Kallrökt lax",
+                "50 g Kräftstjärtar",
+                "Svartpeppar",
+                "Dill",
+                "Gräslök"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Skala och hacka löken, stek i oljan utan att den får någon färg.\n" +
+                    "Häll på grädden, fiskfonden, rivet citronskal och citronsaft.\n" +
+                    "Låt koka ihop ett pad minuter. Strimla laxen och häll ner i såsen tillsammans med kräftstjärtar.\n" +
+                    "Peppra efter smak.\n" +
+                    "Servera med pasta.\n" +
+                    "Dekorera med dill och gräslök.",
+        ),
+        Recipe(
+            id = 48,
+            name = "Pastasås med lax",
+            showUpOnRandom = true,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "100 g Lax",
+                "1,5 msk Vetemjöl",
+                "1,5 dl Grädde",
+                "2 dl Mjölk",
+                "1 Fiskbuljongtärning",
+                "2 msk Hackad dill"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Vispa ut mjölet i grädden. Häll i mjölken och smula i buljongen. Låt koka i 3 minuter.\n" +
+                    "Lägg i lax och dill straxinnan servering.\n" +
+                    "Servera med pasta.",
+        ),
+        Recipe(
+            id = 49,
+            name = "Pastasås med skinka",
+            showUpOnRandom = true,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "150 g Pasta",
+                "0,5 Röd paprika",
+                "0,5 Gul lök",
+                "100 g Rökt skinka",
+                "1 dl Matlagningsgrädde",
+                "0,5 msk Vetemjöl",
+                "1 dl Vatten",
+                "0,5 Buljongtärning",
+                "0,5 tsk Curry",
+                "0,5 krm Svartpeppar",
+                "0,5 msk Tomatpuré"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Koka pastan och gör såsen under tiden. Finhacka paprikan, löken och skinkan.\n" +
+                    "Vispa ihop grädden och vetemjölet i en kastrull. Låt koka upp.\n" +
+                    "Tillsätt vatten,buljong , curry, svatpeppar, tomatpuré, paprika, lök och skinka.\n" +
+                    "Låt koka i 3 minuter.\n" +
+                    "Blanda pastan med såsen och servera.",
+        ),
+        Recipe(
+            id = 50,
+            name = "Engelska pepparkakor",
+            showUpOnRandom = false,
+            halfAvailable = true,
+            ingredientsWhole = listOf(
+                "3 dl Sirap",
+                "400 g Strösocker",
+                "1-2 msk Ingefära",
+                "350 g Smör",
+                "3 dl Grädde",
+                "1 msk Bikarbonat",
+                "1,5 kg Vetemjöl"
+            ),
+            ingredientsHalf = listOf(
+                "1 dl Sirap",
+                "133 g Strösocker",
+                "0,33-0,66 msk Ingefära",
+                "117 g Smör",
+                "1 dl Grädde",
+                "0,33 msk Bikarbonat",
+                "0,5 kg Vetemjöl"
+            ),
+            instructions = "Blir ca 250-300 st\n"+
+                    "Rör ihop sirap,kryddorna och smör till en smidig massa. Rör ner grädden.\n" +
+                    "Arbeta in mjöl och bikarbonat.\n" +
+                    "Låt degen vila i kylskåp till nästa dag.\n",
+        ),
+        Recipe(
+            id = 51,
+            name = "Pepparkakor",
+            showUpOnRandom = false,
+            halfAvailable = true,
+            ingredientsWhole = listOf(
+                "300 g Smör",
+                "1,5 dl Sirap",
+                "4 dl Socker",
+                "2 tsk Kanel",
+                "2 tsk Malen ingefära",
+                "2 tsk Mald kryddnejlika",
+                "3 Ägg",
+                "2 tsk Bikarbonat",
+                "1,3 l Vetemjöl"
+            ),
+            ingredientsHalf = listOf(
+                "100 g Smör",
+                "0,5 dl Sirap",
+                "1,33 dl Socker",
+                "0,66 tsk Kanel",
+                "0,66 tsk Malen ingefära",
+                "0,66 tsk Mald kryddnejlika",
+                "1 Ägg",
+                "0,66 tsk Bikarbonat",
+                "4,3 dl Vetemjöl"
+            ),
+            instructions = "Koka upp smör,sirap,socker och kryddorna. Låt blandningen svalna.\n" +
+                    "Tillsätt äggen. Blanda hälften av mjölet med bikarbonatet. Rörner det i smeten.\n" +
+                    "Tillsätt rästen av mjölet i omgångar. Spara lite till utbakningen.\n" +
+                    "Arbeta degen slät på bakbord. Låt den ligga kalt över natten.\n" +
+                    "Gör kakor av degen. Grädda kakorna i 175 grader i 8-10 minuter. Stora kakor i 150 grader i 10-15 minuter.",
+        ),
+        Recipe(
+            id = 52,
+            name = "Pizzadeg",
+            showUpOnRandom = true,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "5 dl Vetemjöl",
+                "0,75 tsk Salt",
+                "2,5 tsk Bakpulver",
+                "2 msk Olja",
+                "40 g Smör",
+                "2 dl Mjölk"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Blanda vetemjöl, salt och bakpulver.\n" +
+                    "Tillsätt smöret. Rör ut till en smet.\n" +
+                    "Blanda ner resten av ingredienserna.\n" +
+                    "Kavla up på en plåt.\n" +
+                    "Efter att tillsatt önskade pizza pålägg grädda i ugnen på 250 grader i 10 minuter.",
+        ),
+        Recipe(
+            id = 53,
+            name = "Potatis och purjolöksoppa",
+            showUpOnRandom = true,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "1 Gul lök",
+                "2 Purjolökar",
+                "8-10 Medelstora potatisat (fast sort)",
+                "1 Höns, kyckling eller grönsaksbuljongtärning (eller fond)",
+                "1-2 Vitlöksklyftor",
+                "1,5 l Vatten",
+                "2 dl Grädde",
+                "Salt",
+                "Peppar",
+                "Valfria kryddor (ex cayennepappar)",
+                "Smör till stekning"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Hacka löken och strimla purjolöken. Fräs i en gryta i smöret tills allt blir mjukt, utan att få färg.\n" +
+                    "Häll på hälften av vattnet. Lägg i buljongtärningen och låt koka upp.\n" +
+                    "Skala potatisen, skiva eller tärna den. Lägg potatisen i den kokade soppbasen. Pressa i vitlöksklyftorna.\n" +
+                    "Låt koka på svag värme i 30-40 minuter. För slät soppa mixa den nu.\n" +
+                    "Häll i resterande vatten och krydda. Låt koka upp. Häll i grädden. Låt soppan bli varm.\n" +
+                    "Smaka av och servera.\n" +
+                    "Man kan även steka 500g köttfärs(kryddad med salt och peppar) och hälla i efter mixern.",
+        ),
+        Recipe(
+            id = 54,
+            name = "Potatissallad",
+            showUpOnRandom = true,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "400 g Kokt potatis",
+                "0,5 Purjolök",
+                "0,5 Gurka",
+                "1 dl Créme fraiche",
+                "2 msk Majonnäs",
+                "1 msk Senap (Förslöv)"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Blanda créme fraiche, majonnäs och senap.\n" +
+                    "Hacka allt annat och blanda i.",
+        ),
+        Recipe(
+            id = 55,
+            name = "Quesadillas",
+            showUpOnRandom = true,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "4 Tortillabröd",
+                "100 g Rökt skinka",
+                "250 g Keso",
+                "2 tsk Dijonsenap",
+                "1 dl Riven ost",
+                "2 msk Hackad försk timjan",
+                "Svartpeppar",
+                "Olja till stekning"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Strimla skikan och blanda alla ingredienser i en skål.\n" +
+                    "Bred ut röröan på ett bröd, lägg ett annat ovanpå och tryck till.\n" +
+                    "Stek i en stekpanna ca 1 minut på varje sida.\n" +
+                    "Dela i 4 bitar.",
+        ),
+        Recipe(
+            id = 56,
+            name = "Raggmunkar",
+            showUpOnRandom = true,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "2 dl Vetemjöl",
+                "1,5 tsk Salt",
+                "5 dl Mjölk",
+                "1 Ägg",
+                "8 Potatisar"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Blanda ihop alla ingredienser utom potatisen.\n" +
+                    "Skala potatisen och riv den.\n" +
+                    "Blanda ner den rivna potatisen i smeten.\n" +
+                    "Stek till raggmunkar med smör.",
+        ),
+        Recipe(
+            id = 57,
+            name = "Sambal oelek kotletter",
+            showUpOnRandom = true,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "4 Kotletter",
+                "2 dl Créme fraiche",
+                "2,5 dl Vispgrädde",
+                "3 msk Kinesisk soya",
+                "0,5 tsk Sambal oelek"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Koka ihop créme fraiche, grädde, soya och sambal till såsen.\n" +
+                    "Vill man ha såsen lite tjockare så kan man reda med 2msk vetemjöl.\n" +
+                    "Lägg kotletterna råa i en ugnsäker form. Häll över såsen.\n" +
+                    "Sätt in i ugnen på 200 grader i ca 50 minuter.\n" +
+                    "Servera med pressad potatis.",
+        ),
+        Recipe(
+            id = 58,
+            name = "Schackrutor",
+            showUpOnRandom = false,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "200 g Smör",
+                "1 dl Strösocker",
+                "4 dl Vetemjöl",
+                "1 dl Potatismjöl",
+                "05 tsk Bakpulver",
+                "2 tsk Vaniljsocker",
+                "2 msk Kakao"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Finfördela smöret i de torra ingredienserna.\n" +
+                    "Arbeta sedan snabbt ihop det till en deg.\n" +
+                    "Dela degen på två och blanda i kakaon i den ena halvan.\n" +
+                    "Rulla ut degen i fyra delar. (2 ljusa och 2 mörka) Och lägg dem som ett sckack.\n" +
+                    "Grädda i 175 grader i 10 minuter.",
+        ),
+        Recipe(
+            id = 59,
+            name = "Semmelbullar",
+            showUpOnRandom = false,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "50 g Smör",
+                "2,5 dl Mjölk",
+                "25 g Jäst",
+                "1,25 dl Kesella",
+                "2 krm Salt",
+                "0,75 dl Socker",
+                "8 dl Vetemjöl",
+                "1 Vispat ägg"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Blir 14 semmlor\n" +
+                    "Smula jäste i en bunke. Smält smöret, tillsätt mjölken och värm upp till 37 grader.\n" +
+                    "Häll mjölkblandningen över jästen och rör tills allt är upplöst.\n" +
+                    "Tillsätt salt, kesella, socker och det mesta av mjölet.\n" +
+                    "Arbeta degen kraftigt tills den känns smidig. Jäs under bakduk i ca 30 minuter.\n" +
+                    "Arbeta degen på ett mjölat bakbord och baka ut till små släta bullar. Låt jäsa under duk i 20 minuter.\n" +
+                    "Pensla bullarna med det vispade ägget.\n" +
+                    "Grädda bullarna mitt i ugnen i 5-7 minuter på 250 grader.\n" +
+                    "Ta ut och låt dem svalna på galler.",
+        ),
+        Recipe(
+            id = 60,
+            name = "Sherrymarinerad kassler",
+            showUpOnRandom = true,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "150 g Kassler",
+                "0,75 dl Torr sherry",
+                "3 dl Vispgrädde",
+                "2-3 msk Tomatpuré",
+                "1,5 dl Riven ost"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Skär kasslern i 1 cm skivor(lite tunnare)\n" +
+                    "Lägg dem omlott i en ugnsäker form, häll på sherryn.\n" +
+                    "Låt stå i någon timme, övertäckt och svalt (går bra att göra dagen innan och låta stå svalt)\n" +
+                    "Sätt ugnen på 250 grader.\n" +
+                    "Vispa grädden, blanda i tomatpuré och ost. Bred över blandningen jämnt över kasslern.\n" +
+                    "Gratinera tills den börjar få färg, ca 10 minuter.\n" +
+                    "Servera med ris och sallad.",
+        ),
+        Recipe(
+            id = 61,
+            name = "Sjömansbiff",
+            showUpOnRandom = false,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "500-600 g Benfritt kalvkött (i strimlor)",
+                "3 msk Smör",
+                "2 tsk Salt",
+                "Vitpeppar",
+                "3-4 Gula lökar (skivade)",
+                "8-10 Potatisar (skivade)",
+                "4-5 dl Vatten (eller buljong eller öl)",
+                "Persilja"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Bryn hälften av smöret och lägg i köttet, krydda. Bryn löken.\n" +
+                    "I en gryta - varva kött, potatis och lök, avsluta med potatis.\n" +
+                    "Häll över vatten. Låt småkoka under lock i ca 30 minuter (tills potatisen är mjuk)\n" +
+                    "Strö ev. persilja över.",
+        ),
+        Recipe(
+            id = 62,
+            name = "Smör och purjo fisk",
+            showUpOnRandom = true,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "Smör",
+                "Fiskblock",
+                "Purjolök"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Smörj en form. Dela fisken. Lägg fisken i formen och salta. Hacka purjolöken och strö den över fisken.\n" +
+                    "Lägg på mycket smör i skivor på fisken.\n" +
+                    "Sätt in i ugnen på 225 grader i 20 minuter.\n" +
+                    "Servera med potatismos.",
+        ),
+        Recipe(
+            id = 63,
+            name = "Smulpaj",
+            showUpOnRandom = false,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "4-6 Äpplen",
+                "2 msk Socker\n",
+                "Pajdeg",
+                "2 dl Vetemjöl",
+                "2 tsk Socker",
+                "80 g Smör"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Sätt ugnen på 225 grader.\n" +
+                    "Smörj en form. Skala och skiva äpplena och lägg i formen. Strö over socker.\n" +
+                    "Lägg vetemjöl, socker och smör i en skål och arbeta med fingertopparna. Strö degen över äpplena.\n" +
+                    "Ställ in  i ugnen tills degen fått ljusbrun färg och äpplena är mjuka.",
+        ),
+        Recipe(
+            id = 64,
+            name = "Snickers",
+            showUpOnRandom = false,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "1,5 Burk jordnötssmör ca 525 g",
+                "3 dl Sirap",
+                "1,5 dl Strösocker",
+                "1,5 dl Cocos",
+                "1,5 l Okrossad cornflakes",
+                "1,5 tsk Vaniljsocker",
+                "1,5 Blockchokladkakor"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Blanda allt utom cornflakes, vaniljsocker och blockchoklad.\n" +
+                    "Värm i en kastrull till en slät smet (behöver ej koka eller sjuda)\n" +
+                    "Krossa cornflakesen.\n" +
+                    "Tillsätt cornflakes och vaniljsocker och rör om.\n" +
+                    "Bred ut i en långpanna med bakplåtspapper. Låt svalna.\n" +
+                    "Smält Blockchokladen i vattenbad och bred ut över avsvalnande kakan.\n" +
+                    "Innan den svalnat helt dela i fyrkanter.",
+        ),
+        Recipe(
+            id = 65,
+            name = "Sommarknyte",
+            showUpOnRandom = false,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "12 Färskpotatisar",
+                "4 Kokta ägg",
+                "2 Rödlökar",
+                "1 krm Salt",
+                "1 krm Peppar",
+                "75 g Smör",
+                "Gräslök",
+                "Persilja",
+                "Dill"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Koka potatisen, låt svalna och skär i skivor. Skala och hacka äggen, skiva löcken.\n" +
+                    "Fördela potatisen på 4 folie ark. Lägg på ägg och lök. Salta och peppra.\n" +
+                    "Blanda smöret med örterna och fördela överst.\n" +
+                    "Vik ihop till paket och nyp till ordentligt så att inger rinner ut.\n" +
+                    "Lägg paketen på grillen i ca 10 minuter. De är klara när smöret har smält och potatisen är riktigt varm.\n" +
+                    "Gär även att göra i ugnen.",
+        ),
+        Recipe(
+            id = 66,
+            name = "Spaghetti carbonara",
+            showUpOnRandom = true,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "180 g Spaghetti",
+                "2 Ägg",
+                "1 dl Mjölk",
+                "0,5 dl Grädde",
+                "1 Paket bacon",
+                "0,5 Gul lök",
+                "50 g Riven parmesan",
+                "Salt",
+                "Svartpeppar"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Koka pastan och stek det strimlade baconet. Knäck äggen och blanda med mjölken, grädden, ost, salt och peppar.\n" +
+                    "Häll i den färdigkokta pastan i pannan med baconet, sedan äggblandningen.\n" +
+                    "Rör om försiktigt med värme i ca 30 sekunder.\n" +
+                    "Fördela på 2 tallrikar och strö svartpeppar och parmesan på.",
+        ),
+        Recipe(
+            id = 67,
+            name = "Tacopaj",
+            showUpOnRandom = true,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "Pajdeg",
+                "2 dl Vetemjöl",
+                "1 dl Grahamsmjöl",
+                "100 g Smör",
+                "3 msk Kallt vatten\n",
+                "Fyllning",
+                "300 g Köttfärs",
+                "2 dl Créme fraiche",
+                "4-5 msk Salsasås",
+                "2 dl Riven ost",
+                "1 Tomat",
+                "0,5 Paprika",
+                "2 Vitlöksklyftor",
+                "Salt",
+                "Peppar"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Gör pajdegen och tryck ut den i en ugnsäker form. Grädda pajskalet i 10 minuter i 200 grader.\n" +
+                    "Blanda créme fraiche, vitlök, salsasås, riven ost, salt, peppar, hackad tomat och hackad paprika.\n" +
+                    "Lägg köttfärsen i pajskalet och häll créme fraich- blandningen ovan på.\n" +
+                    "Grädda i 225 grader i 25 miuter.\n" +
+                    "Servera med sallad och créme fraiche.",
+        ),
+        Recipe(
+            id = 68,
+            name = "Tigerkaka",
+            showUpOnRandom = false,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "2,5 dl Socker",
+                "200 g Smör",
+                "1,5 dl Grädde eller mjölk",
+                "4 dl Vetemjöl",
+                "2 tsk Bakpulver",
+                "2 msk Kakao"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Starta ugnen på 175 grader.\n" +
+                    "Vispa ägg och socker pösigt. Rör ner det smälta smöret och grädden.\n" +
+                    "Blanda vetemjöl, bakpulver och rör ner det i smeten.\n" +
+                    "Dela smeten i två delar. Blanda kakao i den ena.\n" +
+                    "Bred ljus och mörk smet omväxlande i en smörd och bröad form.\n" +
+                    "Grädda i ca 1 timme.",
+        ),
+        Recipe(
+            id = 69,
+            name = "Tryffeltoppar",
+            showUpOnRandom = false,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "1,5 dl Vispgrädde",
+                "2 msk Smör",
+                "300 g Ljus blockchoklad"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Blir ca 80st\n"+
+                    "Smält blockchokladen i vattenbad.\n" +
+                    "koka upp grädden med smöret.\n" +
+                    "Häll under kraftig vispning ner smörblandningen i chokladen.\n" +
+                    "Häll chokladblandningen i små knäckformar.\n" +
+                    "Låt stelna kallt.",
+        ),
+        Recipe(
+            id = 70,
+            name = "Våfflor(k)",
+            showUpOnRandom = true,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "3 Ägg",
+                "0,5 dl Socker",
+                "1 tsk Salt",
+                "50 g Smör",
+                "3 dl Mjölk",
+                "3,5 dl Vetemjöl",
+                "1 tsk Bakpulver"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Vispa ihop allt\n"+
+                    "Grädda i våffeljärn.",
+        ),
+        Recipe(
+            id = 71,
+            name = "Vaniljbullar",
+            showUpOnRandom = false,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "50 g Jäst",
+                "175 g Smör",
+                "4 dl Gräddmjölk",
+                "1 dl Socker",
+                "1 krm Salt",
+                "1 krm Hjorthornsalt",
+                "1 Ägg",
+                "12-13 dl Vetemjöl\n",
+                "Fyllning",
+                "Fast marzankräm(ca 3 dl)\n",
+                "Pensling",
+                "Smält smör",
+                "Strösocker"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Smula jästen i degbunke. Smält smöret i en kastrull och hälli gräddmjölken. Slå spadet över jästen och rör om.\n" +
+                    "Tillsätt socker, salt, hjorthornsalt, ägg och största delen av mjölet.\n" +
+                    "Arbeta degen smidig och ta upp den på bakbordet.\n" +
+                    "Dela degen i två delar och kavla ut dem till fyrkanter. Som i sin tur sporras ut i fyrkanter ca 7x7 cm.\n" +
+                    "Lägg en klick marzankräm i mitten på fyrkanterna och nyp ihop degen så inte krämen rinner ut.\n" +
+                    "Lägg bullarna på väl smord plåt med skarvarna nedåt och låt bullarna jäsa långsamt till dubbel storlek.\n" +
+                    "Grädda i 250-275 grader i 6-8 minuter.\n" +
+                    "Pensla de varma bullarna med smält smör och doppa dem i socker.",
+        ),
+        Recipe(
+            id = 72,
+            name = "Vaniljkräm",
+            showUpOnRandom = false,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "2 dl Mjölk",
+                "2 Äggulor",
+                "1 msk Majsstärkelse",
+                "1 msk Strösocker",
+                "1 msk Vaniljsocker"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Vispa samman mjölk, äggulor, socker och majsstärkelse i en kastrull.\n" +
+                    "Sjud krämen under omrörning tills den tjocknar.\n" +
+                    "Smaksätt med vaniljsocker och låt krämen svalna.",
+        ),
+        Recipe(
+            id = 73,
+            name = "Vegetarisk röra till bakpotatis",
+            showUpOnRandom = true,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "1 Rödlök",
+                "1 Burk majs",
+                "1-2 Tomater",
+                "1 Avokado",
+                "Keso",
+                "Salt",
+                "Peppar"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Hacka rödlök, tomat och avokado.\n" +
+                    "Blanda allt och servera med bakad potatis eller med lite skinka i eller till baguetter.",
+        ),
+        Recipe(
+            id = 74,
+            name = "Veggolasagne med keso",
+            showUpOnRandom = true,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "3 Purjolökar (går bra med gul lök också)",
+                "4 Tomater",
+                "0,5 dl Tomatpuré",
+                "2,5 dl Matlagningsgrädde",
+                "1 tsk Salt",
+                "1 krm Peppar",
+                "1 msk Basilika (torkad eller färsk)",
+                "500 g Keso med chili",
+                "2 dl Riven ost",
+                "8-10 Lasagneplattor",
+                "1 Grönsakstärning",
+                "Smör att steka i"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Sätt ugnen på 115 grader.\n" +
+                    "Skölj och strimla purjolöken, fräs den i smör. Skär tomaterna i bitar.\n" +
+                    "Rör tomater, tomatpuré, buljongtärning, grädde, salt, peppar och basilika.\n" +
+                    "Koka upp såsen och tillsätt keson i slutet.\n" +
+                    "Varva lasagneplattor och sås i en smord, ugnsäker form. Avsluta med sås och ost överst.\n" +
+                    "Grädda i nedre delen av ugnen i ca 30 minuter.",
+        ),
+        Recipe(
+            id = 75,
             name = "Äggakaka",
             showUpOnRandom = false,
             halfAvailable = true,
@@ -746,6 +1680,24 @@ object RecipeData {
             ingredientsHalf = listOf("3 Ägg", "1 msk Socker", "0,5 tsk Salt", "3,75 dl Mjölk", "3 msk Vetemjöl"),
             instructions = "Blanda ihop ingredienserna.\n" +
                     "Stek och samtidigt skrapa botten på stekpannan konstant."
-        )
+        ),
+        Recipe(
+            id = 76,
+            name = "Örtscones",
+            showUpOnRandom = false,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "2 Rundlar",
+                "4,5 dl Vetemjöl",
+                "2 tsk Bakpulver",
+                "0,5 tsk Salt",
+                "50 g Smör",
+                "2 dl Mjölk",
+                "1 msk Oregano",
+                "1 dl Riven ost"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Grädda i 250 grader ca 12 min",
+        ),
     )
 }
