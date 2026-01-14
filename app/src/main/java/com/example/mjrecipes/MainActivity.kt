@@ -4,11 +4,12 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
@@ -27,52 +28,20 @@ class MainActivity : ComponentActivity() {
             MJRecipesTheme {
                 val navController = rememberNavController()
 
-                val recipe = Recipe(
-                    id = 1,
-                    name = "Baconsås",
-                    showUpOnRandom = true,
-                    halfAvailable = false,
-                    ingredientsWhole = listOf(
-                        "140 g Bacon",
-                        "0,5 Gul lök",
-                        "4-5 dl Grädde",
-                        "2 msk Vetemjöl (till redning)",
-                        "3-4 msk Chilisås",
-                        "Salt",
-                        "Peppar"
-                    ),
-                    ingredientsHalf = listOf(),
-                    instructions = "Bryn hackad lök och strimlad bacon.\n" +
-                            "Gör redning med mjölet och lite av grädden, häll på baconet och löken.\n" +
-                            "Häll på resten av grädden och chilisåsen. Smaka av med salt och peppar.\n" +
-                            "Servera med pasta.\n",
-                )
+                var activeRecipe by rememberSaveable { mutableStateOf<Recipe?>(null) }
 
-                NavHost( navController = navController, startDestination = "Mainpage"){
-                    composable ( "Mainpage" ) {
-                        MainPage()
+                NavHost( navController = navController, startDestination = "RecipeOverviewPage"){
+                    composable ( "RecipeOverviewPage" ) {
+                        MainPage(onRecipeClicked = {recipeReturn ->
+                            activeRecipe = recipeReturn
+                            navController.navigate("RecipeView")
+                        })
                     }
                     composable (route = "RecipeView"){
-                        RecipePage(onBackButtonClicked = { navController.navigateUp() }, recipe )
+                        RecipePage(onBackButtonClicked = { navController.navigateUp() }, activeRecipe)
                     }
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    MJRecipesTheme {
-        Greeting("Android")
     }
 }

@@ -26,14 +26,21 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.mjrecipes.data.Recipe
 import com.example.mjrecipes.data.RecipeData
 
 @Composable
-fun MainPage(){
+fun MainPage(onRecipeClicked: (Recipe) -> Unit){
+    val allRecipes = RecipeData.allRecipes
+    val allRandomRecipes = allRecipes.filter { it.showUpOnRandom }
     Scaffold(
         modifier = Modifier.fillMaxSize(),
         topBar = { TopBarGreeting() },
-        bottomBar = { BottomBar() }
+        bottomBar = { BottomBar(allRandomRecipes) } // Inte klar med denna borde skrivas om som lamda funktion och
+        // val randomIndex = recipes.indices.random()
+        // coroutineScope.launch {
+        // listState.animateScrollToItem(randomIndex)
+        // }
     ) { innerPadding ->
         LazyColumn(
             modifier = Modifier
@@ -41,10 +48,10 @@ fun MainPage(){
                 .padding(horizontal = 2.dp),
             contentPadding = innerPadding
         ) {
-            items(RecipeData.allRecipes.size) { index ->
-                val recipe = RecipeData.allRecipes[index]
+            items(allRecipes.size) { index ->
+                val recipe = allRecipes[index]
                 Card(
-                    onClick = {},
+                    onClick = { onRecipeClicked(recipe) },
                     modifier = Modifier
                         .fillMaxWidth()
                         .height(60.dp)
@@ -81,7 +88,7 @@ fun TopBarGreeting(){
 }
 
 @Composable
-fun BottomBar(){
+fun BottomBar(allRandomRecipe: List<Recipe>){
     BottomAppBar(
         modifier = Modifier.fillMaxWidth()
     ){
@@ -89,15 +96,17 @@ fun BottomBar(){
             modifier = Modifier.fillMaxSize(),
             contentAlignment = Alignment.Center
         ){
-            RandomRecipeButton()
+            RandomRecipeButton(allRandomRecipe = allRandomRecipe)
         }
     }
 }
 
 @Composable
-fun RandomRecipeButton(){
+fun RandomRecipeButton(allRandomRecipe: List<Recipe>){
     OutlinedButton(
-        onClick = {}
+        onClick = {
+            val randomNote = allRandomRecipe.indices.random()
+        }
     )
     { Text(text ="Random recipe") }
 }
@@ -105,5 +114,5 @@ fun RandomRecipeButton(){
 @Composable
 @Preview( showSystemUi = true)
 fun MainPageView(){
-    MainPage()
+    MainPage({})
 }
