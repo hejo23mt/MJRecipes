@@ -435,7 +435,7 @@ object RecipeData {
         ),
         Recipe(
             id = 21,
-            name = "Kladkaka med toscatäcke",
+            name = "Kladdkaka med toscatäcke",
             showUpOnRandom = false,
             halfAvailable = false,
             ingredientsWhole = listOf(

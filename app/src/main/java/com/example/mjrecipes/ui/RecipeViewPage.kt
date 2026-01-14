@@ -23,6 +23,7 @@ import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -42,30 +43,31 @@ fun RecipePage(onBackButtonClicked: () -> Unit, recipe: Recipe?){
         ) {
             Column(
                 modifier = Modifier
+                    .fillMaxSize()
                     .padding(horizontal = 4.dp)
             ) {
                 if (recipe != null){
-                    LazyColumn(
-                    ) {
-                        items(recipe.ingredientsWhole) { items ->
-                            Row() {
-                                Text(
-                                    fontSize = 20.sp,
-                                    style = MaterialTheme.typography.bodyLarge,
-                                    text = "• "
-                                )
-                                Text(
-                                    fontSize = 20.sp,
-                                    text = items
-                                )
-                            }
+                    recipe.ingredientsWhole.forEach { items ->
+                        Row() {
+                            Text(
+                                fontSize = 20.sp,
+                                style = MaterialTheme.typography.bodyLarge,
+                                text = "• "
+                            )
+                            Text(
+                                fontSize = 20.sp,
+                                text = items
+                            )
                         }
                     }
+
                     Spacer(modifier = Modifier.padding(10.dp))
                     HorizontalDivider()
                     Spacer(modifier = Modifier.padding(10.dp))
                     Box(
-                        modifier = Modifier.verticalScroll(rememberScrollState())
+                        modifier = Modifier
+                            .weight(1f)
+                            .verticalScroll(rememberScrollState())
                     ) {
                         Text(
                             fontSize = 20.sp,
@@ -88,7 +90,11 @@ fun TopBarGreetingWithBackButton(onBackButtonClicked: () -> Unit, recipeName: St
             }
         },
         title = {
-            Text(text = recipeName)
+            Text(
+                fontSize = 26.sp,
+                fontWeight = FontWeight.SemiBold,
+                text = recipeName
+            )
         }
     )
 }
