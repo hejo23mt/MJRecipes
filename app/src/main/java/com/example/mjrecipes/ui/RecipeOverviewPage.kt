@@ -1,23 +1,19 @@
 package com.example.mjrecipes.ui
 
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.automirrored.filled.ArrowForwardIos
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.Card
-import androidx.compose.material3.CardColors
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CenterAlignedTopAppBar
-import androidx.compose.material3.CheckboxDefaults.colors
 import androidx.compose.material3.DismissibleDrawerSheet
 import androidx.compose.material3.DismissibleNavigationDrawer
 import androidx.compose.material3.DrawerValue
@@ -27,9 +23,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationDrawerItem
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
-import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -39,7 +33,6 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.layout.ModifierLocalBeyondBoundsLayout
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -47,7 +40,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.mjrecipes.data.Recipe
 import com.example.mjrecipes.data.RecipeData
-import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
 
 @Composable
@@ -66,8 +58,8 @@ fun MainPage(onRecipeClicked: (Recipe) -> Unit, onRecipeExampleClicked: () -> Un
         drawerContent = {
             DismissibleDrawerSheet(drawerState) {
                 NavigationDrawerItem(
-                    icon = { Icon(Icons.Default.Home, contentDescription = null)},
-                    label = { Text(text = "Hem")},
+                    icon = { Icon(Icons.AutoMirrored.Filled.ArrowForwardIos, contentDescription = null)},
+                    label = { Text(text = "")},
                     selected = false,
                     onClick = {
                         scope.launch { drawerState.close() }
@@ -77,7 +69,7 @@ fun MainPage(onRecipeClicked: (Recipe) -> Unit, onRecipeExampleClicked: () -> Un
                     modifier = Modifier.padding(horizontal = 8.dp)
                 ) {
                     CardInDrawer("Förslagslista", onRecipeExampleClicked )
-                    CardInDrawer("Test", {})
+                    CardInDrawer("Mer snart...", {})
                 }
             }
         },
