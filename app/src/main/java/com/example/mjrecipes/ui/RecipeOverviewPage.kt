@@ -10,17 +10,27 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Home
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardColors
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CenterAlignedTopAppBar
+import androidx.compose.material3.CheckboxDefaults.colors
+import androidx.compose.material3.DismissibleDrawerSheet
+import androidx.compose.material3.DismissibleNavigationDrawer
+import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.NavigationDrawerItem
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -41,75 +51,101 @@ import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
 
 @Composable
-fun MainPage(onRecipeClicked: (Recipe) -> Unit){
+fun MainPage(onRecipeClicked: (Recipe) -> Unit, onRecipeExampleClicked: () -> Unit){
     val allRecipes = RecipeData.allRecipes
     val allRandomRecipes = allRecipes.filter { it.showUpOnRandom }
     val listState = rememberLazyListState()
     val coroutineScope = rememberCoroutineScope()
     var highlightedIndex by remember { mutableStateOf<Int?>(null) }
+    val drawerState = rememberDrawerState(DrawerValue.Closed)
+    val scope = rememberCoroutineScope()
 
-    Scaffold(
-        modifier = Modifier.fillMaxSize(),
-        topBar = { TopBarGreeting() },
-        bottomBar = {
-            BottomBar (onRandomClick = {
-                if (allRandomRecipes.isNotEmpty()) {
-                    val randomRecipe = allRandomRecipes.random()
-                    val indexInAllRecipes = allRecipes.indexOfFirst { it.id == randomRecipe.id }
 
-                    if (indexInAllRecipes != -1) {
-                        highlightedIndex = indexInAllRecipes
-                        coroutineScope.launch {
-                            listState.animateScrollToItem(indexInAllRecipes)
-                        }
-                    }
-                }
-            }
-            )
-        }
-    ) { innerPadding ->
-        LazyColumn(
-            state = listState,
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(horizontal = 2.dp),
-            contentPadding = innerPadding
-        ) {
-            items(allRecipes.size) { index ->
-                val recipe = allRecipes[index]
-                val isHighlighted = index == highlightedIndex
-
-                Card(
+    DismissibleNavigationDrawer(
+        drawerState = drawerState,
+        drawerContent = {
+            DismissibleDrawerSheet(drawerState) {
+                NavigationDrawerItem(
+                    icon = { Icon(Icons.Default.Home, contentDescription = null)},
+                    label = { Text(text = "Hem")},
+                    selected = false,
                     onClick = {
-                        highlightedIndex = null
-                        onRecipeClicked(recipe)
-                    },
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(60.dp)
-                        .padding(2.dp),
-                    colors = CardDefaults.cardColors(
-                        containerColor = if (isHighlighted) {
-                            MaterialTheme.colorScheme.primaryContainer
-                        } else {
-                            MaterialTheme.colorScheme.surface
-                        }
-                    )
+                        scope.launch { drawerState.close() }
+                    }
+                )
+                Column (
+                    modifier = Modifier.padding(horizontal = 8.dp)
                 ) {
-                    Box(
-                        modifier = Modifier.fillMaxSize(),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Text(
-                            fontSize = 20.sp,
-                            textAlign = TextAlign.Center,
-                            text = recipe.name
-                        )
+                    CardInDrawer("Förslagslista", onRecipeExampleClicked )
+                    CardInDrawer("Test", {})
+                }
+            }
+        },
+        content = {
+            Scaffold(
+                modifier = Modifier.fillMaxSize(),
+                topBar = { TopBarGreeting() },
+                bottomBar = {
+                    BottomBar (onRandomClick = {
+                        if (allRandomRecipes.isNotEmpty()) {
+                            val randomRecipe = allRandomRecipes.random()
+                            val indexInAllRecipes = allRecipes.indexOfFirst { it.id == randomRecipe.id }
+
+                            if (indexInAllRecipes != -1) {
+                                highlightedIndex = indexInAllRecipes
+                                coroutineScope.launch {
+                                    listState.animateScrollToItem(indexInAllRecipes)
+                                }
+                            }
+                        }
+                    }
+                    )
+                }
+            ) { innerPadding ->
+                LazyColumn(
+                    state = listState,
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .padding(horizontal = 2.dp),
+                    contentPadding = innerPadding
+                ) {
+                    items(allRecipes.size) { index ->
+                        val recipe = allRecipes[index]
+                        val isHighlighted = index == highlightedIndex
+
+                        Card(
+                            onClick = {
+                                highlightedIndex = null
+                                onRecipeClicked(recipe)
+                            },
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(60.dp)
+                                .padding(2.dp),
+                            colors = CardDefaults.cardColors(
+                                containerColor = if (isHighlighted) {
+                                    MaterialTheme.colorScheme.primaryContainer
+                                } else {
+                                    MaterialTheme.colorScheme.surface
+                                }
+                            )
+                        ) {
+                            Box(
+                                modifier = Modifier.fillMaxSize(),
+                                contentAlignment = Alignment.Center
+                            ) {
+                                Text(
+                                    fontSize = 20.sp,
+                                    textAlign = TextAlign.Center,
+                                    text = recipe.name
+                                )
+                            }
+                        }
                     }
                 }
             }
         }
-    }
+    )
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -148,11 +184,32 @@ fun RandomRecipeButton(onRandomClick: () -> Unit){
     OutlinedButton(
         onClick = onRandomClick
     )
-    { Text(text ="Random recipe") }
+    { Text(text ="Random recept") }
+}
+
+@Composable
+fun CardInDrawer(cardText: String, onClick: () -> Unit){
+    Card(
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(60.dp),
+        onClick = onClick,
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)
+    ) {
+        Box(
+            modifier = Modifier.fillMaxSize(),
+            contentAlignment = Alignment.CenterStart
+        ) {
+            Text(
+                fontSize = 20.sp,
+                text = cardText
+            )
+        }
+    }
 }
 
 @Composable
 @Preview( showSystemUi = true)
 fun MainPageView(){
-    MainPage({})
+    MainPage({}, {})
 }

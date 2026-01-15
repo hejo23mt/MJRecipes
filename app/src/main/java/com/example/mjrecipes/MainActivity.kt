@@ -12,11 +12,14 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.mjrecipes.data.Recipe
+import com.example.mjrecipes.data.RecipeViewModel
 import com.example.mjrecipes.ui.MainPage
+import com.example.mjrecipes.ui.RecipeExamples
 import com.example.mjrecipes.ui.RecipePage
 import com.example.mjrecipes.ui.theme.MJRecipesTheme
 
@@ -27,18 +30,25 @@ class MainActivity : ComponentActivity() {
         setContent {
             MJRecipesTheme {
                 val navController = rememberNavController()
-
-                var activeRecipe by rememberSaveable { mutableStateOf<Recipe?>(null) }
+                val viewModel: RecipeViewModel = viewModel()
 
                 NavHost( navController = navController, startDestination = "RecipeOverviewPage"){
                     composable ( "RecipeOverviewPage" ) {
-                        MainPage(onRecipeClicked = {recipeReturn ->
-                            activeRecipe = recipeReturn
+                        MainPage(onRecipeClicked = { recipe ->
+                            viewModel.setSelectedRecipe(recipe)
                             navController.navigate("RecipeView")
-                        })
+                        }, onRecipeExampleClicked = {
+                            navController.navigate("RecipeExample")
+                        }
+                        )
                     }
                     composable (route = "RecipeView"){
-                        RecipePage(onBackButtonClicked = { navController.navigateUp() }, activeRecipe)
+                        RecipePage(onBackButtonClicked = { navController.navigateUp() },
+                            recipe = viewModel.selectedRecipe.value
+                            )
+                    }
+                    composable (route = "RecipeExample"){
+                        RecipeExamples(onBackButtonClicked = { navController.navigate("RecipeOverviewPage") })
                     }
                 }
             }
