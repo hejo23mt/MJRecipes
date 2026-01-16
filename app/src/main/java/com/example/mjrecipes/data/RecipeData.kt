@@ -969,6 +969,7 @@ object RecipeData {
             showUpOnRandom = true,
             halfAvailable = true,
             ingredientsWhole = listOf(
+                "Hel sats",
                 "6 ägg",
                 "6 dl Vetemjöl",
                 "1 l Mjölk",
@@ -976,6 +977,7 @@ object RecipeData {
                 "50 g Smör"
             ),
             ingredientsHalf = listOf(
+                "Halv sats",
                 "3 ägg",
                 "3 dl Vetemjöl",
                 "5 dl Mjölk",
@@ -1123,6 +1125,7 @@ object RecipeData {
             showUpOnRandom = false,
             halfAvailable = true,
             ingredientsWhole = listOf(
+                "Hel sats",
                 "3 dl Sirap",
                 "400 g Strösocker",
                 "1-2 msk Ingefära",
@@ -1132,6 +1135,7 @@ object RecipeData {
                 "1,5 kg Vetemjöl"
             ),
             ingredientsHalf = listOf(
+                "Tredjedels sats",
                 "1 dl Sirap",
                 "133 g Strösocker",
                 "0,33-0,66 msk Ingefära",
@@ -1151,6 +1155,7 @@ object RecipeData {
             showUpOnRandom = false,
             halfAvailable = true,
             ingredientsWhole = listOf(
+                "Hel sats",
                 "300 g Smör",
                 "1,5 dl Sirap",
                 "4 dl Socker",
@@ -1162,6 +1167,7 @@ object RecipeData {
                 "1,3 l Vetemjöl"
             ),
             ingredientsHalf = listOf(
+                "Tredjedels sats",
                 "100 g Smör",
                 "0,5 dl Sirap",
                 "1,33 dl Socker",
@@ -1676,8 +1682,22 @@ object RecipeData {
             name = "Äggakaka",
             showUpOnRandom = false,
             halfAvailable = true,
-            ingredientsWhole = listOf("5 Ägg", "2 msk Socker", "1 tsk Salt", "7,5 dl Mjölk", "5 msk Vetemjöl"),
-            ingredientsHalf = listOf("3 Ägg", "1 msk Socker", "0,5 tsk Salt", "3,75 dl Mjölk", "3 msk Vetemjöl"),
+            ingredientsWhole = listOf(
+                "Hel sats",
+                "5 Ägg",
+                "2 msk Socker",
+                "1 tsk Salt",
+                "7,5 dl Mjölk",
+                "5 msk Vetemjöl"
+            ),
+            ingredientsHalf = listOf(
+                "Halv sats",
+                "3 Ägg",
+                "1 msk Socker",
+                "0,5 tsk Salt",
+                "3,75 dl Mjölk",
+                "3 msk Vetemjöl"
+            ),
             instructions = "Blanda ihop ingredienserna.\n" +
                     "Stek och samtidigt skrapa botten på stekpannan konstant."
         ),

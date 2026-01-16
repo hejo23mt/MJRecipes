@@ -34,7 +34,7 @@ object RecipeExampleData {
         "Köttfärspaj",
         "Köttfärssås",
         "Lasagne",
-        "Makaroni pudding",
+        "Makaronipudding",
         "Mangochutneykyckling",
         "Nuggets",
         "Ost och skinkpaj",
@@ -52,7 +52,7 @@ object RecipeExampleData {
         "Tzatziki",
         "Ugnstekt falukorv",
         "Ugnspannkaka",
-        "Varmamackor",
+        "Varma mackor",
         "Våfflor",
         "Wok",
         "Ädelostpasta"
