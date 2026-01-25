@@ -21,6 +21,7 @@ import com.example.mjrecipes.data.RecipeViewModel
 import com.example.mjrecipes.ui.MainPage
 import com.example.mjrecipes.ui.RecipeExamples
 import com.example.mjrecipes.ui.RecipePage
+import com.example.mjrecipes.ui.RecipePageShow
 import com.example.mjrecipes.ui.theme.MJRecipesTheme
 
 class MainActivity : ComponentActivity() {
@@ -43,7 +44,7 @@ class MainActivity : ComponentActivity() {
                         )
                     }
                     composable (route = "RecipeView"){
-                        RecipePage(onBackButtonClicked = { navController.navigateUp() },
+                        RecipePageShow(onBackButtonClicked = { navController.navigateUp() },
                             recipe = viewModel.selectedRecipe.value
                             )
                     }
