@@ -1,5 +1,11 @@
 package com.example.mjrecipes.data
 
+/**
+
+Dataclass for recipes.
+
+ **/
+
 data class Recipe(
     val id: Int,
     val name: String,

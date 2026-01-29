@@ -42,6 +42,14 @@ import com.example.mjrecipes.data.Recipe
 import com.example.mjrecipes.data.RecipeData
 import kotlinx.coroutines.launch
 
+/**
+
+Main screen that lists the recipes.
+
+ **/
+
+
+/** Main composable with all recipes and random button **/
 @Composable
 fun MainPage(onRecipeClicked: (Recipe) -> Unit, onRecipeExampleClicked: () -> Unit){
     val allRecipes = RecipeData.allRecipes
@@ -140,6 +148,7 @@ fun MainPage(onRecipeClicked: (Recipe) -> Unit, onRecipeExampleClicked: () -> Un
     )
 }
 
+/** Composable for the topbar **/
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TopBarGreeting(){
@@ -156,6 +165,7 @@ fun TopBarGreeting(){
     )
 }
 
+/** Composable with bottombar (displays random button) **/
 @Composable
 fun BottomBar(onRandomClick: () -> Unit){
     BottomAppBar(
@@ -171,6 +181,7 @@ fun BottomBar(onRandomClick: () -> Unit){
     }
 }
 
+/** Composable with random button **/
 @Composable
 fun RandomRecipeButton(onRandomClick: () -> Unit){
     OutlinedButton(
@@ -179,6 +190,7 @@ fun RandomRecipeButton(onRandomClick: () -> Unit){
     { Text(text ="Random recept") }
 }
 
+/** Composable of a clickable card with recipe title **/
 @Composable
 fun CardInDrawer(cardText: String, onClick: () -> Unit){
     Card(
@@ -200,6 +212,7 @@ fun CardInDrawer(cardText: String, onClick: () -> Unit){
     }
 }
 
+/** Composable that preview the page **/
 @Composable
 @Preview( showSystemUi = true)
 fun MainPageView(){

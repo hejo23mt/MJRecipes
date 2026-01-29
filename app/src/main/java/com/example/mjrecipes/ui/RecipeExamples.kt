@@ -35,6 +35,13 @@ import androidx.compose.ui.unit.sp
 import com.example.mjrecipes.data.RecipeExampleData
 import kotlinx.coroutines.launch
 
+/**
+
+Page with the recipe example and random button.
+
+ **/
+
+/** Composable for the paige **/
 @Composable
 fun RecipeExamples(
     onBackButtonClicked: () -> Unit
@@ -98,6 +105,7 @@ fun RecipeExamples(
     }
 }
 
+/** Composable for the topbar **/
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TopBarExamplesWithBackButton(onBackButtonClicked: () -> Unit){
@@ -117,6 +125,7 @@ fun TopBarExamplesWithBackButton(onBackButtonClicked: () -> Unit){
     )
 }
 
+/** Composable for the bottombar (displays random button) **/
 @Composable
 fun BottomBarExamples(onRandomClick: () -> Unit){
     BottomAppBar(
@@ -132,6 +141,7 @@ fun BottomBarExamples(onRandomClick: () -> Unit){
     }
 }
 
+/** Composable for the random button **/
 @Composable
 fun RandomRecipeButtonExamples(onRandomClick: () -> Unit){
     OutlinedButton(
@@ -140,6 +150,7 @@ fun RandomRecipeButtonExamples(onRandomClick: () -> Unit){
     { Text(text ="Random exempel") }
 }
 
+/** Composable to preview the page **/
 @Composable
 @Preview(showSystemUi = true)
 fun RecipeExamplesView(){

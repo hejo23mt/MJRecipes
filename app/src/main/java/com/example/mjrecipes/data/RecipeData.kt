@@ -1,6 +1,10 @@
 package com.example.mjrecipes.data
 
-import androidx.compose.ui.platform.isDebugInspectorInfoEnabled
+/**
+
+Recipe database.
+
+ **/
 
 object RecipeData {
     val allRecipes = listOf(

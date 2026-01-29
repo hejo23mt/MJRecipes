@@ -1,5 +1,11 @@
 package com.example.mjrecipes.data
 
+/**
+
+Recipe example database.
+
+ **/
+
 object RecipeExampleData {
     val ExampleList = listOf(
         "Baconsås",
@@ -16,7 +22,7 @@ object RecipeExampleData {
         "Flygande Jakob",
         "Fläskfilé med fyllning",
         "Fläskfilégryta",
-        "Fläskfilégryta Kejos",
+        "Fläskfilégryta Keyyos",
         "Fläskpannkaka",
         "Hamburgare",
         "Hawaiikassler",

@@ -4,6 +4,12 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.compose.runtime.State
 
+/**
+
+ViewModel for the recipe.
+
+ **/
+
 class RecipeViewModel : ViewModel() {
 
     private val _selectedRecipe = mutableStateOf<Recipe?>(null)

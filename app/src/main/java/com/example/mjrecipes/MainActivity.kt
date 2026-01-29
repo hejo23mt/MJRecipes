@@ -24,6 +24,12 @@ import com.example.mjrecipes.ui.RecipePage
 import com.example.mjrecipes.ui.RecipePageShow
 import com.example.mjrecipes.ui.theme.MJRecipesTheme
 
+/**
+
+MainActivity that handles the NavController.
+
+ **/
+
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

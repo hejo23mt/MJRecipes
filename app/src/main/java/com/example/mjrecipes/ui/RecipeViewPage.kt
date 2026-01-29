@@ -1,6 +1,6 @@
 package com.example.mjrecipes.ui
 
-import android.R
+import android.annotation.SuppressLint
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -41,7 +41,17 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.TextUnit
+import androidx.compose.ui.unit.em
 
+/**
+
+Page that displays the chosen recipe from the RecipeOverviewPage.
+
+**/
+
+
+/** Composable that checks screen size and displays the right composable **/
+@SuppressLint("UnusedBoxWithConstraintsScope")
 @Composable
 fun RecipePageShow(onBackButtonClicked: () -> Unit, recipe: Recipe?){
     BoxWithConstraints {
@@ -67,6 +77,7 @@ fun RecipePageShow(onBackButtonClicked: () -> Unit, recipe: Recipe?){
     }
 }
 
+/** Composable for portrait mode **/
 @Composable
 fun RecipePage(onBackButtonClicked: () -> Unit, recipe: Recipe?) {
     Scaffold(
@@ -104,10 +115,12 @@ fun RecipePage(onBackButtonClicked: () -> Unit, recipe: Recipe?) {
                                 Text(
                                     fontSize = 20.sp,
                                     style = MaterialTheme.typography.bodyLarge,
+                                    lineHeight = 1.2.em,
                                     text = "• "
                                 )
                                 Text(
                                     fontSize = 20.sp,
+                                    lineHeight = 1.2.em,
                                     text = items
                                 )
                             }
@@ -118,10 +131,12 @@ fun RecipePage(onBackButtonClicked: () -> Unit, recipe: Recipe?) {
                                 Text(
                                     fontSize = 20.sp,
                                     style = MaterialTheme.typography.bodyLarge,
+                                    lineHeight = 1.2.em,
                                     text = "• "
                                 )
                                 Text(
                                     fontSize = 20.sp,
+                                    lineHeight = 1.2.em,
                                     text = items
                                 )
                             }
@@ -138,6 +153,7 @@ fun RecipePage(onBackButtonClicked: () -> Unit, recipe: Recipe?) {
                     ) {
                         Text(
                             fontSize = 20.sp,
+                            lineHeight = 1.2.em,
                             text = recipe.instructions
                         )
                     }
@@ -147,6 +163,7 @@ fun RecipePage(onBackButtonClicked: () -> Unit, recipe: Recipe?) {
     }
 }
 
+/** Composable for landscape mode **/
 @Composable
 fun LyingRecipePage(
     onBackButtonClicked: () -> Unit,
@@ -194,10 +211,12 @@ fun LyingRecipePage(
                                         Text(
                                             fontSize = sizeOnText,
                                             style = MaterialTheme.typography.bodyLarge,
+                                            lineHeight = 1.2.em,
                                             text = "• "
                                         )
                                         Text(
                                             fontSize = sizeOnText,
+                                            lineHeight = 1.2.em,
                                             text = items
                                         )
                                     }
@@ -208,10 +227,12 @@ fun LyingRecipePage(
                                         Text(
                                             fontSize = sizeOnText,
                                             style = MaterialTheme.typography.bodyLarge,
+                                            lineHeight = 1.2.em,
                                             text = "• "
                                         )
                                         Text(
                                             fontSize = sizeOnText,
+                                            lineHeight = 1.2.em,
                                             text = items
                                         )
                                     }
@@ -228,6 +249,7 @@ fun LyingRecipePage(
                         ) {
                             Text(
                                 fontSize = sizeOnText,
+                                lineHeight = 1.2.em,
                                 text = recipe.instructions
                             )
                         }
@@ -238,6 +260,7 @@ fun LyingRecipePage(
     }
 }
 
+/** Composable with the topbar **/
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TopBarGreetingWithBackButton(onBackButtonClicked: () -> Unit, recipeName: String) {
@@ -257,6 +280,7 @@ fun TopBarGreetingWithBackButton(onBackButtonClicked: () -> Unit, recipeName: St
     )
 }
 
+/** Composable with two buttons if halfAvailable are true  **/
 @Composable
 fun WholeOrHalfButtons(onWholeClicked: () -> Unit, onHalfClicked: () -> Unit, halfName: String) {
     Surface(
@@ -283,6 +307,7 @@ fun WholeOrHalfButtons(onWholeClicked: () -> Unit, onHalfClicked: () -> Unit, ha
     }
 }
 
+/** Composable to preview portrait mode **/
 @Composable
 @Preview(showSystemUi = true)
 fun RecipePageView() {
@@ -319,6 +344,7 @@ fun RecipePageView() {
     RecipePage({}, recipe)
 }
 
+/** Composable to preview landscape mode on a tablet **/
 @Composable
 @Preview(
     showSystemUi = true,
