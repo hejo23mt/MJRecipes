@@ -115,12 +115,12 @@ fun RecipePage(onBackButtonClicked: () -> Unit, recipe: Recipe?) {
                                 Text(
                                     fontSize = 20.sp,
                                     style = MaterialTheme.typography.bodyLarge,
-                                    lineHeight = 1.2.em,
+                                    lineHeight = 1.3.em,
                                     text = "• "
                                 )
                                 Text(
                                     fontSize = 20.sp,
-                                    lineHeight = 1.2.em,
+                                    lineHeight = 1.3.em,
                                     text = items
                                 )
                             }
@@ -131,12 +131,12 @@ fun RecipePage(onBackButtonClicked: () -> Unit, recipe: Recipe?) {
                                 Text(
                                     fontSize = 20.sp,
                                     style = MaterialTheme.typography.bodyLarge,
-                                    lineHeight = 1.2.em,
+                                    lineHeight = 1.3.em,
                                     text = "• "
                                 )
                                 Text(
                                     fontSize = 20.sp,
-                                    lineHeight = 1.2.em,
+                                    lineHeight = 1.3.em,
                                     text = items
                                 )
                             }
@@ -153,7 +153,7 @@ fun RecipePage(onBackButtonClicked: () -> Unit, recipe: Recipe?) {
                     ) {
                         Text(
                             fontSize = 20.sp,
-                            lineHeight = 1.2.em,
+                            lineHeight = 1.3.em,
                             text = recipe.instructions
                         )
                     }
@@ -211,12 +211,12 @@ fun LyingRecipePage(
                                         Text(
                                             fontSize = sizeOnText,
                                             style = MaterialTheme.typography.bodyLarge,
-                                            lineHeight = 1.2.em,
+                                            lineHeight = 1.3.em,
                                             text = "• "
                                         )
                                         Text(
                                             fontSize = sizeOnText,
-                                            lineHeight = 1.2.em,
+                                            lineHeight = 1.3.em,
                                             text = items
                                         )
                                     }
@@ -227,12 +227,12 @@ fun LyingRecipePage(
                                         Text(
                                             fontSize = sizeOnText,
                                             style = MaterialTheme.typography.bodyLarge,
-                                            lineHeight = 1.2.em,
+                                            lineHeight = 1.3.em,
                                             text = "• "
                                         )
                                         Text(
                                             fontSize = sizeOnText,
-                                            lineHeight = 1.2.em,
+                                            lineHeight = 1.3.em,
                                             text = items
                                         )
                                     }
@@ -249,7 +249,7 @@ fun LyingRecipePage(
                         ) {
                             Text(
                                 fontSize = sizeOnText,
-                                lineHeight = 1.2.em,
+                                lineHeight = 1.3.em,
                                 text = recipe.instructions
                             )
                         }

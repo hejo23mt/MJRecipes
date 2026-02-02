@@ -43,6 +43,7 @@ object RecipeExampleData {
         "Makaronipudding",
         "Mangochutneykyckling",
         "Nuggets",
+        "Omelett",
         "Ost och skinkpaj",
         "Pad thai",
         "Pannkakor",

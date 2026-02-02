@@ -70,6 +70,33 @@ object RecipeData {
                     "Servera med ostmackor."
         ),
         Recipe(
+            id = 82,
+            name = "Chili con carne",
+            showUpOnRandom = true,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "2 st Gul lök",
+                "2 msk Smör",
+                "2 st Vitlöksklyftor",
+                "400 g Köttfärs",
+                "1 dl Vatten",
+                "1 dl Tomatpuré",
+                "1 st Köttbuljongtärning",
+                "1,5 msk Chilipulver",
+                "1 tsk Oregano",
+                "2-3 burkar Vita bönor i Tomatsås (á 300 g)",
+                "1-2 krm Cayennepeppar",
+                "1 krm Svartpeppar",
+                "1 tsk Salt"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Hacka löklen och stek den i en gryta. Pressa ner vitlöken.\n" +
+                    "Stek färsen tills den är genomstekt.\n" +
+                    "Häll i tomatpuré, buljongtärning, chilipulver och oregano. Rör om och häll i vattnet. \n" +
+                    "Vänd försiktigt ner bönorna och låt allt bli genomvarmt. Smaka av med cayennepeppar, svartpeppar och salt. \n" +
+                    "Servera med ris.",
+        ),
+        Recipe(
             id = 4,
             name = "Chokladbollar",
             showUpOnRandom = false,
@@ -111,6 +138,26 @@ object RecipeData {
                     "Blanda 1 del saft + 4 delar vatten.\n" +
                     "\n" +
                     "Samma recept funkar för apelsinsaft men ta istället 2 apelsiner och 1 citron.",
+        ),
+        Recipe(
+            id = 77,
+            name = "Currykycklinggryta",
+            showUpOnRandom = true,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "1 Purjolök",
+                "1-2 tsk Curry",
+                "1,5 dl Matgrädde",
+                "1 Kyckingbuljongtärning",
+                "Örtkrydda efter smak (tex oregano)",
+                "2 Kycklingfiléer"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Skär kycklingfilén i bitar, stek dem så att dem får en fin stekyta, krydda med curry och örter.\n" +
+                    "Skiva purjolöken och låt steka med kycklingen.\n" +
+                    "Häll på matgrädde och smula ner buljongtärning och rör om.\n" +
+                    "Låt puttra en stund.\n" +
+                    "Servera med ris.",
         ),
         Recipe(
             id = 6,
@@ -178,27 +225,6 @@ object RecipeData {
                     "Låt koka upp. Lägg i fisken och låt soppan koka i 3-4 minuter. Smacksätt med salt och cayennepeppar.",
         ),
         Recipe(
-            id = 9,
-            name = "Fläskfilégryta med kantareller",
-            showUpOnRandom = true,
-            halfAvailable = false,
-            ingredientsWhole = listOf(
-                "400 g Fläskfilé",
-                "2 dl Créme fraiche",
-                "1 msk Smör",
-                "1,5 msk Kantarellfond",
-                "50 g Kantareller",
-                "10 Cocktailtomater, halverade",
-                "1 msk Färsk timjan"
-            ),
-            ingredientsHalf = listOf(),
-            instructions = "Dela fläskfilén i bitar. Stek i en stekpanna, salta och peppra.\n" +
-                    "Lägg i kantarellerna och stek tills allt har fått färg.\n" +
-                    "Vispa ihop créme fraiche coh fond, häll över i pannan. Rör om och låt puttra i några minuter.\n" +
-                    "Blanda ner de halverade tomaterna. Riv blad från färsk timjan och strö över.\n" +
-                    "Servera med pasta, ris eller potatis.",
-        ),
-        Recipe(
             id = 10,
             name = "Fläskfilégryta",
             showUpOnRandom = true,
@@ -220,6 +246,83 @@ object RecipeData {
                     "Lägg i fläskfilén och låt puttra i 10 minuter, rör om då och då.\n" +
                     "Dela baconet och lägg i grytan, låt puttra i 5 minuter.\n" +
                     "Servera med pasta.",
+        ),
+        Recipe(
+            id = 79,
+            name = "Fläskfilégryta Keyyos",
+            showUpOnRandom = true,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "600 g Fläskfilé",
+                "250 g Cocktailtomater",
+                "2 Vitlöksklyftor",
+                "1-2 msk Tomatpuré",
+                "1 Oxbuljongtärning",
+                "1 msk Kinesisk soja",
+                "2 dl Vispgrädde",
+                "2 dl Créme fraiche",
+                "0,5 tsk Paprikapulver",
+                "0,5 tsk Lökpulver",
+                "Salt och svartpeppar",
+                "50 g Babyspenat"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Skär fläskfilén i strimlor, dela tomaterna och skala vitlöksklyftorna.\n " +
+                    "Stek fläskfilén så att den får en fin stekyta.\n" +
+                    "Tillsätt tomat och vitlök och stek i några minuter.\n" +
+                    "Häll på créme fraiche, grädde, tomatpuré, buljongtärning, kryddor och soja och rör om.\n" +
+                    "Låt puttra i 10 minuter, rör om då och då.\n" +
+                    "Smaka av med salt och peppar, lägg i spenat och låt den bli mjuk.\n" +
+                    "Servera med pasta.",
+        ),
+        Recipe(
+            id = 9,
+            name = "Fläskfilégryta med kantareller",
+            showUpOnRandom = true,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "400 g Fläskfilé",
+                "2 dl Créme fraiche",
+                "1 msk Smör",
+                "1,5 msk Kantarellfond",
+                "50 g Kantareller",
+                "10 Cocktailtomater, halverade",
+                "1 msk Färsk timjan"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Dela fläskfilén i bitar. Stek i en stekpanna, salta och peppra.\n" +
+                    "Lägg i kantarellerna och stek tills allt har fått färg.\n" +
+                    "Vispa ihop créme fraiche coh fond, häll över i pannan. Rör om och låt puttra i några minuter.\n" +
+                    "Blanda ner de halverade tomaterna. Riv blad från färsk timjan och strö över.\n" +
+                    "Servera med pasta, ris eller potatis.",
+        ),
+        Recipe(
+            id = 80,
+            name = "Fläskpannkaka",
+            showUpOnRandom = true,
+            halfAvailable = true,
+            ingredientsWhole = listOf(
+                "Hel sats",
+                "300 g Bacon",
+                "1 msk Smör",
+                "3 Ägg",
+                "8 dl Mjölk",
+                "4 dl Vetemjöl",
+                "1 tsk Salt"
+            ),
+            ingredientsHalf = listOf(
+                "Halv sats",
+                "140 g Bacon",
+                "0,5 msk Smör",
+                "2 Ägg",
+                "4 dl Mjölk",
+                "2 dl Vetemjöl",
+                "0,5 tsk Salt"
+            ),
+            instructions = "Sätt ugnen på 225 grader. Smörj en form med smöret. \n" +
+                    "Hacka och stek baconet. Vispa ihop alla ingredienser.\n" +
+                    "Lägg baconet i formen och häll på smeten.\n" +
+                    "Grädda pannkakan i ca 30 minuter i mitten av ugnen.\n"
         ),
         Recipe(
             id = 11,
@@ -769,23 +872,26 @@ object RecipeData {
                     "Smaka av och häll sedan i nudlarna.",
         ),
         Recipe(
-            id = 35,
-            name = "Lättlagad fläskfilé",
+            id = 81,
+            name = "Lasagne",
             showUpOnRandom = true,
             halfAvailable = false,
             ingredientsWhole = listOf(
-                "500 g Fläskfilé",
-                "200 g Bacon",
-                "2 msk Tomatpuré",
-                "3 dl Vispgrädde",
-                "2 dl Créme fraiche",
-                "Salt",
-                "Svartpeppar"
+                "1 sats köttfärssås",
+                "Färska lasagneplattor",
+                "2 msk Smör",
+                "0,75 dl Vetemjöl",
+                "7-8 dl Mjölk",
+                "1 tsk Salt",
+                "1 krm Peppar",
+                "2 dl Riven ost"
             ),
             ingredientsHalf = listOf(),
-            instructions = "Stek fläskfilén i skivor, tärna baconet och lägg den tillsammans med fläskfilén. Krydda med salt och peppar.\n" +
-                    "Tillsätt tomatpuré, grädde och créme fraiche. Låt alltsammans puttra i ca 20 minuter.\n" +
-                    "Servera med pressad potatis.",
+            instructions = "Sätt ugnen på 225 grader.\n" +
+                    "Smält smöret i en gryta och rör ner mjölet.\n" +
+                    "Tillsätt mjölken, koka såsen i 5 minuter under omrörning. Tillsätt salt, peppar och ost. \n" +
+                    "Varva plattorna med köttfärssås och ostsås i en form. Avsluta med ostsås. \n" +
+                    "Grägga mitt i ugnen i 30-40 minuter.",
         ),
         Recipe(
             id = 36,
@@ -871,6 +977,25 @@ object RecipeData {
                     "Servera med kokt potatis och sallad.",
         ),
         Recipe(
+            id = 35,
+            name = "Lättlagad fläskfilé",
+            showUpOnRandom = true,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "500 g Fläskfilé",
+                "200 g Bacon",
+                "2 msk Tomatpuré",
+                "3 dl Vispgrädde",
+                "2 dl Créme fraiche",
+                "Salt",
+                "Svartpeppar"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Stek fläskfilén i skivor, tärna baconet och lägg den tillsammans med fläskfilén. Krydda med salt och peppar.\n" +
+                    "Tillsätt tomatpuré, grädde och créme fraiche. Låt alltsammans puttra i ca 20 minuter.\n" +
+                    "Servera med pressad potatis.",
+        ),
+        Recipe(
             id = 39,
             name = "Makaronipudding",
             showUpOnRandom = true,
@@ -911,27 +1036,6 @@ object RecipeData {
                     "Servera med ris, banan och mandariner.",
         ),
         Recipe(
-            id = 41,
-            name = "Mörk chokladmousse",
-            showUpOnRandom = false,
-            halfAvailable = false,
-            ingredientsWhole = listOf(
-                "200 g Mörk choklad",
-                "2 Äggulor",
-                "2 msk Strösocker",
-                "2 dl Vispgrädde",
-                "1 dl Créme fraiche"
-            ),
-            ingredientsHalf = listOf(),
-            instructions = "Smält chokladen i vattenbad.\n" +
-                    "Vispa äggulor och socker poröst.\n" +
-                    "Vispa ihop grädde och créme fraiche.\n" +
-                    "Blanda chokladen med äggsmeten.\n" +
-                    "Vänd i gräddfraichen i chokladen lite i taget.\n" +
-                    "Höll upp i önskad form.\n" +
-                    "Ställ kallt tills den ska serveras.",
-        ),
-        Recipe(
             id = 42,
             name = "Morotsrulltårta",
             showUpOnRandom = false,
@@ -966,6 +1070,54 @@ object RecipeData {
                     "Ta bort det bakade bakade bakplåtspappret och låt kakan svalna helt.\n" +
                     "Bred sedan på fyllningen och rulla ihop.\n" +
                     "Kakan är godast kall och håller flera dagar i kylen.",
+        ),
+        Recipe(
+            id = 78,
+            name = "Myror som klättrar i träd",
+            showUpOnRandom = true,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "150 g Nudlar",
+                "2 msk Finhackad ingefära",
+                "3 Vitlöksklyftor",
+                "1 msk Vit misopasta",
+                "1 msk Sambal oelek",
+                "200 g Köttfärs",
+                "1,5 mak Japansk soja",
+                "1 tsk Kinesisk soja",
+                "2 tsk Strösocker",
+                "4 dl Kycklingbuljong",
+                "2 Salladslökar"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Koka nudlar.\n" +
+                    "Stek ingefära, fin hackad vitlök, misopasta och sambal i generöst med olja i 30 sekunder.\n" +
+                    "Tillsätt färsen och låt fräsa tills den är genomstekt.\n" +
+                    "Tillstätt soja och socker, rör om.\n" +
+                    "Häll på buljongen och lägg i nudlar och det vita av salladslöken. \n" +
+                    "Låt puttra under omrörning i några minuter tills nudlarna absorberat det mesta av buljongen. \n" +
+                    "Lägg i det gröna av salladslöken. Låt puttra i ytterligare 30 sekunder under omrörning",
+        ),
+        Recipe(
+            id = 41,
+            name = "Mörk chokladmousse",
+            showUpOnRandom = false,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "200 g Mörk choklad",
+                "2 Äggulor",
+                "2 msk Strösocker",
+                "2 dl Vispgrädde",
+                "1 dl Créme fraiche"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Smält chokladen i vattenbad.\n" +
+                    "Vispa äggulor och socker poröst.\n" +
+                    "Vispa ihop grädde och créme fraiche.\n" +
+                    "Blanda chokladen med äggsmeten.\n" +
+                    "Vänd i gräddfraichen i chokladen lite i taget.\n" +
+                    "Höll upp i önskad form.\n" +
+                    "Ställ kallt tills den ska serveras.",
         ),
         Recipe(
             id = 43,
@@ -1332,6 +1484,25 @@ object RecipeData {
                     "Grädda i 175 grader i 10 minuter.",
         ),
         Recipe(
+            id = 76,
+            name = "Scones",
+            showUpOnRandom = false,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "2 Rundlar",
+                "4,5 dl Vetemjöl",
+                "2 tsk Bakpulver",
+                "0,5 tsk Salt",
+                "50 g Smör",
+                "2 dl Mjölk\n",
+                "Eventuellt",
+                "1 msk Oregano",
+                "1 dl Riven ost"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Grädda i 250 grader ca 12 min",
+        ),
+        Recipe(
             id = 59,
             name = "Semmelbullar",
             showUpOnRandom = false,
@@ -1419,7 +1590,7 @@ object RecipeData {
             id = 63,
             name = "Smulpaj",
             showUpOnRandom = false,
-            halfAvailable = false,
+            halfAvailable = true,
             ingredientsWhole = listOf(
                 "4-6 Äpplen",
                 "2 msk Socker\n",
@@ -1428,11 +1599,17 @@ object RecipeData {
                 "2 tsk Socker",
                 "80 g Smör"
             ),
-            ingredientsHalf = listOf(),
+            ingredientsHalf = listOf(
+                "Havredeg",
+                "1 dl Vetemjöl",
+                "1,5 dl Havregryn",
+                "2-3 msk Socker",
+                "75 g Smör"
+            ),
             instructions = "Sätt ugnen på 225 grader.\n" +
                     "Smörj en form. Skala och skiva äpplena och lägg i formen. Strö over socker.\n" +
                     "Lägg vetemjöl, socker och smör i en skål och arbeta med fingertopparna. Strö degen över äpplena.\n" +
-                    "Ställ in  i ugnen tills degen fått ljusbrun färg och äpplena är mjuka.",
+                    "Ställ in i ugnen tills degen fått ljusbrun färg och äpplena är mjuka, ca 25 minuter.",
         ),
         Recipe(
             id = 64,
@@ -1572,6 +1749,21 @@ object RecipeData {
                     "Låt stelna kallt.",
         ),
         Recipe(
+            id = 83,
+            name = "Ugnsstekt falukorv",
+            showUpOnRandom = true,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "Falukorv",
+                "Ketchup",
+                "Senap",
+                "Lök",
+                "Ost"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Gratinera i ugnen i 225 grader i ca 20 minuter. \n",
+        ),
+        Recipe(
             id = 70,
             name = "Våfflor(k)",
             showUpOnRandom = true,
@@ -1586,7 +1778,7 @@ object RecipeData {
                 "1 tsk Bakpulver"
             ),
             ingredientsHalf = listOf(),
-            instructions = "Vispa ihop allt\n"+
+            instructions = "Vispa ihop allt.\n"+
                     "Grädda i våffeljärn.",
         ),
         Recipe(
@@ -1704,24 +1896,6 @@ object RecipeData {
             ),
             instructions = "Blanda ihop ingredienserna.\n" +
                     "Stek och samtidigt skrapa botten på stekpannan konstant."
-        ),
-        Recipe(
-            id = 76,
-            name = "Örtscones",
-            showUpOnRandom = false,
-            halfAvailable = false,
-            ingredientsWhole = listOf(
-                "2 Rundlar",
-                "4,5 dl Vetemjöl",
-                "2 tsk Bakpulver",
-                "0,5 tsk Salt",
-                "50 g Smör",
-                "2 dl Mjölk",
-                "1 msk Oregano",
-                "1 dl Riven ost"
-            ),
-            ingredientsHalf = listOf(),
-            instructions = "Grädda i 250 grader ca 12 min",
         ),
     )
 }
