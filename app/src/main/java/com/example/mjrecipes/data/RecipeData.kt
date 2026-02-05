@@ -778,7 +778,7 @@ object RecipeData {
             showUpOnRandom = true,
             halfAvailable = false,
             ingredientsWhole = listOf(
-                "Färska lsagneplattor",
+                "Färska lasagneplattor",
                 "Smör",
                 "500 g Kycklingfärs",
                 "Mozzarella\n",
