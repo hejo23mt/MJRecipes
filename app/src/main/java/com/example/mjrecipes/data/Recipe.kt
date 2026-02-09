@@ -7,7 +7,6 @@ Dataclass for recipes.
  **/
 
 data class Recipe(
-    val id: Int,
     val name: String,
     val showUpOnRandom: Boolean,
     val halfAvailable: Boolean,

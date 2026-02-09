@@ -312,7 +312,6 @@ fun WholeOrHalfButtons(onWholeClicked: () -> Unit, onHalfClicked: () -> Unit, ha
 @Preview(showSystemUi = true)
 fun RecipePageView() {
     val recipe = Recipe(
-        id = 1,
         name = "Baconsås",
         showUpOnRandom = true,
         halfAvailable = false,
@@ -352,7 +351,6 @@ fun RecipePageView() {
 )
 fun LyingRecipePageView() {
     val recipe = Recipe(
-        id = 1,
         name = "Baconsås",
         showUpOnRandom = true,
         halfAvailable = true,

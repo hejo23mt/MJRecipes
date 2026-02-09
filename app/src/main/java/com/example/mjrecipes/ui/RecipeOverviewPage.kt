@@ -89,7 +89,7 @@ fun MainPage(onRecipeClicked: (Recipe) -> Unit, onRecipeExampleClicked: () -> Un
                     BottomBar (onRandomClick = {
                         if (allRandomRecipes.isNotEmpty()) {
                             val randomRecipe = allRandomRecipes.random()
-                            val indexInAllRecipes = allRecipes.indexOfFirst { it.id == randomRecipe.id }
+                            val indexInAllRecipes = allRecipes.indexOfFirst { it.name == randomRecipe.name }
 
                             if (indexInAllRecipes != -1) {
                                 highlightedIndex = indexInAllRecipes
