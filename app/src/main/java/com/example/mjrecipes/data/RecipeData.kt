@@ -234,6 +234,34 @@ object RecipeData {
                     "Stek i smör",
         ),
         Recipe(
+            name = "Fetaostkyckling",
+            showUpOnRandom = true,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "1 Gul lök",
+                "1 Vitlöksklyfta",
+                "250 g Skogschampinjoner",
+                "140 g Bacon",
+                "150 g Fetaost",
+                "500 g Strimlad kyckling",
+                "3 dl Mjölk",
+                "1 dl Vispgrädde",
+                "1 tsk Oregano",
+                "1 msk Majsstärkelse",
+                "Salt",
+                "Svartpeppar",
+                "1 msk Smör",
+                "1 dl Rostad lök"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Skala och hacka lök och vitlök. Dela champinjonerna i halvor och skär baconet i 3 cm bitar. Smula fetaosten.\n" +
+                    "Stek lök och vitlök i en stor gryta tills den är mjuk. Ta upp löken på en tallrik. Stek kycklingen.\n" +
+                    "Vispa ihop mjölk, grädde, oregano och majsstärkelse och rör ner i grytan tillsammans med den stekta löken.\n" +
+                    "Låt koka ca 3 minuter och smaka av med salt och peppar.\n" +
+                    "Stek bacon och champinjoner i en stekpanna till fin stekyta. Ta av från värmen och vände ner fetaost och rostad lök.\n" +
+                    "Toppa grytan med champinjonblandningen och servera med sallad och ris.",
+        ),
+        Recipe(
             name = "Fisksoppa",
             showUpOnRandom = true,
             halfAvailable = false,
@@ -1161,6 +1189,32 @@ object RecipeData {
                     "Vänd i gräddfraichen i chokladen lite i taget.\n" +
                     "Höll upp i önskad form.\n" +
                     "Ställ kallt tills den ska serveras.",
+        ),
+        Recipe(
+            name = "Pad thai",
+            showUpOnRandom = true,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "300 g Nudlar",
+                "2 st Kycklingfiléer",
+                "2 st Ägg",
+                "3-4 st Salladslökar",
+                "2-3 st Morötter",
+                "200 g Vitkål",
+                "4-5 msk Jordnötter\n",
+                "Sås",
+                "0,5 dl Ljus soya",
+                "2 msk Tamarindpuré",
+                "2 msk Ostronsås",
+                "2 msk Fisksås",
+                "2 msk Socker",
+                "1 dl Vatten"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Koka nudlarna. Hacka salladslöken, morot och vitkål. Hacka kycklingen.\n" +
+                    "Blanda alla ingredienser till såsen.\n" +
+                    "Stek äggen vid sidan av. Stek kycklingen. Lägg i vitkål och morot. Lägg i de stekta äggen.\n" +
+                    "Häll i nudlar och såsen. Rör om ordentligt. Blanda ner salladslök och jordnötter.",
         ),
         Recipe(
             name = "Pannkakor Malins",
