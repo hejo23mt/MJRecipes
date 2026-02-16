@@ -1422,7 +1422,7 @@ object RecipeData {
                 "0,66 tsk Bikarbonat",
                 "4,3 dl Vetemjöl"
             ),
-            instructions = "Koka upp smör,sirap,socker och kryddorna. Låt blandningen svalna.\n" +
+            instructions = "Koka upp smör, sirap,socker och kryddorna. Låt blandningen svalna.\n" +
                     "Tillsätt äggen. Blanda hälften av mjölet med bikarbonatet. Rörner det i smeten.\n" +
                     "Tillsätt rästen av mjölet i omgångar. Spara lite till utbakningen.\n" +
                     "Arbeta degen slät på bakbord. Låt den ligga kalt över natten.\n" +
@@ -1444,7 +1444,7 @@ object RecipeData {
             instructions = "Blanda vetemjöl, salt och bakpulver.\n" +
                     "Tillsätt smöret. Rör ut till en smet.\n" +
                     "Blanda ner resten av ingredienserna.\n" +
-                    "Kavla up på en plåt.\n" +
+                    "Kavla ut på en plåt.\n" +
                     "Efter att tillsatt önskade pizza pålägg grädda i ugnen på 250 grader i 10 minuter.",
         ),
         Recipe(
@@ -1561,7 +1561,7 @@ object RecipeData {
             instructions = "Finfördela smöret i de torra ingredienserna.\n" +
                     "Arbeta sedan snabbt ihop det till en deg.\n" +
                     "Dela degen på två och blanda i kakaon i den ena halvan.\n" +
-                    "Rulla ut degen i fyra delar. (2 ljusa och 2 mörka) Och lägg dem som ett sckack.\n" +
+                    "Rulla ut degen i fyra delar. (2 ljusa och 2 mörka) Och lägg dem som ett schack.\n" +
                     "Grädda i 175 grader i 10 minuter.",
         ),
         Recipe(
