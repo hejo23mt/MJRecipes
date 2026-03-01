@@ -271,7 +271,7 @@ object RecipeData {
                 "2-3 Vitlöksklyftor",
                 "6 dl Mjölk",
                 "2,5 dl Matlagningsgrädde",
-                "1 dl Vitt vin eller vatten + 1 dl citron",
+                "1 dl Vitt vin eller vatten + 1 msk citron",
                 "2 st Fiskbuljongtärningar",
                 "1 tsk Timjan",
                 "Salt",
