@@ -1155,7 +1155,7 @@ object RecipeData {
                 "1 msk Vit misopasta",
                 "1 msk Sambal oelek",
                 "200 g Köttfärs",
-                "1,5 mak Japansk soja",
+                "1,5 msk Japansk soja",
                 "1 tsk Kinesisk soja",
                 "2 tsk Strösocker",
                 "4 dl Kycklingbuljong",
