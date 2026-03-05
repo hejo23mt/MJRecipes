@@ -1187,7 +1187,7 @@ object RecipeData {
                     "Vispa ihop grädde och créme fraiche.\n" +
                     "Blanda chokladen med äggsmeten.\n" +
                     "Vänd i gräddfraichen i chokladen lite i taget.\n" +
-                    "Höll upp i önskad form.\n" +
+                    "Häll upp i önskad form.\n" +
                     "Ställ kallt tills den ska serveras.",
         ),
         Recipe(
