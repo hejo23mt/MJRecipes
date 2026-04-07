@@ -1241,16 +1241,24 @@ object RecipeData {
         Recipe(
             name = "Pannkakor Jonatans",
             showUpOnRandom = true,
-            halfAvailable = false,
+            halfAvailable = true,
             ingredientsWhole = listOf(
                 "4 ägg",
                 "1 tsk Salt",
                 "1 dl Socker",
-                "6 dl Mjölk",
-                "8 dl Vetemjöl",
+                "8 dl Mjölk",
+                "6 dl Vetemjöl",
                 "50 g Smör"
             ),
-            ingredientsHalf = listOf(),
+            ingredientsHalf = listOf(
+                "Halv sats",
+                "2 ägg",
+                "0,5 tsk Salt",
+                "0,5 dl Socker",
+                "4 dl Mjölk",
+                "3 dl Vetemjöl",
+                "25 g Smör"
+            ),
             instructions = "Vispa ihop allt",
         ),
         Recipe(
