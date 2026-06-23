@@ -293,9 +293,9 @@ object RecipeData {
                 "200 g Champinjoner",
                 "140 g Bacon",
                 "4 dl Créme fraiche",
-                "2 tsk Paprikapulver",
                 "3 msk Tomatpuré",
-                "1 msk Malen chilipeppar"
+                "2 tsk Paprikapulver",
+                "1 tsk Malen chilipeppar"
             ),
             ingredientsHalf = listOf(),
             instructions = "Skär fläskfilén i strimlor, stek dem så att dem får en fin stekyta, de behöver ej bli genomstekta.\n" +
