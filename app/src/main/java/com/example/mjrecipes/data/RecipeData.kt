@@ -400,6 +400,25 @@ object RecipeData {
                     "Servera med ris och sallad.",
         ),
         Recipe(
+            name = "Focaccia",
+            showUpOnRandom = false,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "3 dl Vatten",
+                "25 g Jäst",
+                "1 tsk Salt",
+                "0,5 dl Olivolja (+ extra till formen)",
+                "6,5 dl Vetemjöl (ca 390 g)"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Värm vattnet till 37 grader. Smula jästen i en bunke, tillsätt salt och olja och häll i vattnet. Rör till jästen har löst sig\n" +
+                    "Tillsätt mjöl och bearbeta till en slät deg. Täck över bunken och låt jäsa i 30 minuter i rumstemperatur.\n" +
+                    "Häll olja i en form(ca 18x24 cm). Häll degen i formen och vänd den så att den får olja på båda sidor.\n" +
+                    "Dra degen försiktign till en jämn platta med oljade händer. Låt degen jäsa övertäckt 30-45 minuter. Sätt ugnen på 200 graden.\n" +
+                    "Gör 15-20 hål i degen med fingertopparna. Ringla över 0,5 dl olivolja och stö över flingsalt.\n" +
+                    "Grädda brödet i mitten av ungen i ca 25 minuter. Låt svalna i formen och skär brödet strax före servering.",
+        ),
+        Recipe(
             name = "Foliebakad fisk",
             showUpOnRandom = true,
             halfAvailable = false,
@@ -914,6 +933,31 @@ object RecipeData {
                     "Smaka av och häll sedan i nudlarna.",
         ),
         Recipe(
+            name = "Köttbullar i tomatsås",
+            showUpOnRandom = true,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "500 g Köttbullar\n",
+                "Tomatsås",
+                "1-1,5 msk Olivolja",
+                "1 Gul lök",
+                "1 Vitlöksklyfta",
+                "400 g Krossade tomater",
+                "1,5 msk Tomatpuré",
+                "1-1,5 msk Mörk balsamvinäger",
+                "1 tsk Torkad basilika",
+                "0,5-1 tsk Salt",
+                "0,5-1 krm Svartpeppar",
+                "0,5 dl Matlagningsgrädde"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Hetta upp olivoljan i en kastrull. Rör ner lök/vitlök och värm under omrörning till löken mjuknat.\n" +
+                    "Tillsätt sedan tomatpuré och fräs vidare någon minut.\n" +
+                    "Tillsätt sedan krossade tomater, balsamvinäger, grädde, basilika, salt och peppar. Smaka av.\n" +
+                    "Lägg ner köttbullarna i såsen. Låt sjuda i 5 minuter.\n" +
+                    "Servera med pasta.",
+        ),
+        Recipe(
             name = "Köttfärslimpa/ Köttbullar/ Biffar",
             showUpOnRandom = true,
             halfAvailable = false,
@@ -930,6 +974,30 @@ object RecipeData {
             instructions = "200 grader i 35 minuter för köttfärslimpa\n"+
                     "Häll mjölk och skorpmjöl i ett mått (5dl eller större), låt stå och svälla.\n" +
                     "Hacka löken. Blanda alla ingredienser i en bunke. Forma till valfri form.",
+        ),
+        Recipe(
+            name = "Köttfärssoppa",
+            showUpOnRandom = true,
+            halfAvailable = false,
+            ingredientsWhole = listOf(
+                "500 g Köttfärs",
+                "1 Gul lök",
+                "1 Vitlökklyfta",
+                "4-5 Potatisar",
+                "4-5 Morötter",
+                "2 tsk Chilipulver",
+                "2 tsk Senap",
+                "3 msk Tomatpuré",
+                "2 Köttbuljongtärningar",
+                "8-10 dl Vatten",
+                "1 msk Persilja"
+            ),
+            ingredientsHalf = listOf(),
+            instructions = "Hacka lök och vitlök. Fräs löken, vitlök och köttfärs i en gryta. Salta och peppra.\n" +
+                    "Blanda ner chilipulver, senap och tomatpuré. Låt fräsa i någon minut.\n" +
+                    "Lägg i buljongtärningar och häll i vatten. Låt koka på svag värme.\n" +
+                    "Skala under tiden potatis och morötter, skär i bitar och lägg i grytan. Koka i 15-20 minuter.\n" +
+                    "Blanda i persilja och smaka av.",
         ),
         Recipe(
             name = "Köttgryta",
