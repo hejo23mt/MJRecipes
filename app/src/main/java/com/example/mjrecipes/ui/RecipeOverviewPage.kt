@@ -1,5 +1,10 @@
 package com.example.mjrecipes.ui
 
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.slideInVertically
+import androidx.compose.animation.slideOutVertically
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -10,6 +15,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowForwardIos
+import androidx.compose.material.icons.filled.KeyboardArrowUp
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -18,6 +24,7 @@ import androidx.compose.material3.DismissibleDrawerSheet
 import androidx.compose.material3.DismissibleNavigationDrawer
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationDrawerItem
@@ -26,6 +33,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -59,7 +67,9 @@ fun MainPage(onRecipeClicked: (Recipe) -> Unit, onRecipeExampleClicked: () -> Un
     var highlightedIndex by remember { mutableStateOf<Int?>(null) }
     val drawerState = rememberDrawerState(DrawerValue.Closed)
     val scope = rememberCoroutineScope()
-
+    val showScrollToTop by remember {
+        derivedStateOf { listState.firstVisibleItemIndex > 0 }
+    }
 
     DismissibleNavigationDrawer(
         drawerState = drawerState,
@@ -85,6 +95,26 @@ fun MainPage(onRecipeClicked: (Recipe) -> Unit, onRecipeExampleClicked: () -> Un
             Scaffold(
                 modifier = Modifier.fillMaxSize(),
                 topBar = { TopBarGreeting() },
+                floatingActionButton = {
+                    AnimatedVisibility(
+                        visible = showScrollToTop,
+                        enter = fadeIn() + slideInVertically { it / 2 },
+                        exit = fadeOut() + slideOutVertically { it / 2 }
+                    ) {
+                        FloatingActionButton(
+                            onClick = {
+                                coroutineScope.launch {
+                                    listState.animateScrollToItem(0)
+                                }
+                            }
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.KeyboardArrowUp,
+                                contentDescription = "Scroll to top"
+                            )
+                        }
+                    }
+                },
                 bottomBar = {
                     BottomBar (onRandomClick = {
                         if (allRandomRecipes.isNotEmpty()) {
