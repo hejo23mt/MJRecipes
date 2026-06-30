@@ -8,6 +8,7 @@ import androidx.compose.animation.slideOutVertically
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -102,6 +103,14 @@ fun MainPage(onRecipeClicked: (Recipe) -> Unit, onRecipeExampleClicked: () -> Un
                             CardInDrawer("Förslagslista", onRecipeExampleClicked)
                             CardInDrawer("Mer snart...", {})
                         }
+                        Spacer(modifier = Modifier.weight(1f))
+                        Text(
+                            text = "v2.0.1",
+                            style = MaterialTheme.typography.bodySmall,
+                            modifier = Modifier.padding(16.dp).fillMaxWidth(),
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            textAlign = TextAlign.Center
+                        )
                     }
                     VerticalDivider()
                 }
@@ -210,7 +219,6 @@ fun TopBarGreeting(onMenuClick: () -> Unit){
         },
         title = {
             Text(
-                modifier = Modifier.fillMaxWidth(),
                 fontSize = 26.sp,
                 fontWeight = FontWeight.SemiBold,
                 text = "Malin & Jonatans Recept"
