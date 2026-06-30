@@ -7,6 +7,8 @@ import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.slideOutVertically
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -16,6 +18,7 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowForwardIos
 import androidx.compose.material.icons.filled.KeyboardArrowUp
+import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -26,11 +29,13 @@ import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationDrawerItem
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.VerticalDivider
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.derivedStateOf
@@ -41,6 +46,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.modifier.modifierLocalConsumer
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
@@ -75,26 +81,40 @@ fun MainPage(onRecipeClicked: (Recipe) -> Unit, onRecipeExampleClicked: () -> Un
         drawerState = drawerState,
         drawerContent = {
             DismissibleDrawerSheet(drawerState) {
-                NavigationDrawerItem(
-                    icon = { Icon(Icons.AutoMirrored.Filled.ArrowForwardIos, contentDescription = null)},
-                    label = { Text(text = "")},
-                    selected = false,
-                    onClick = {
-                        scope.launch { drawerState.close() }
+                Row(modifier = Modifier.fillMaxHeight()) {
+                    Column(modifier = Modifier.weight(1f)) {
+                        NavigationDrawerItem(
+                            icon = {
+                                Icon(
+                                    Icons.AutoMirrored.Filled.ArrowForwardIos,
+                                    contentDescription = null
+                                )
+                            },
+                            label = { Text(text = "") },
+                            selected = false,
+                            onClick = {
+                                scope.launch { drawerState.close() }
+                            }
+                        )
+                        Column(
+                            modifier = Modifier.padding(horizontal = 8.dp)
+                        ) {
+                            CardInDrawer("Förslagslista", onRecipeExampleClicked)
+                            CardInDrawer("Mer snart...", {})
+                        }
                     }
-                )
-                Column (
-                    modifier = Modifier.padding(horizontal = 8.dp)
-                ) {
-                    CardInDrawer("Förslagslista", onRecipeExampleClicked )
-                    CardInDrawer("Mer snart...", {})
+                    VerticalDivider()
                 }
             }
         },
         content = {
             Scaffold(
                 modifier = Modifier.fillMaxSize(),
-                topBar = { TopBarGreeting() },
+                topBar = {
+                    TopBarGreeting(onMenuClick = {
+                        scope.launch { drawerState.open() }
+                    })
+                },
                 floatingActionButton = {
                     AnimatedVisibility(
                         visible = showScrollToTop,
@@ -181,14 +201,18 @@ fun MainPage(onRecipeClicked: (Recipe) -> Unit, onRecipeExampleClicked: () -> Un
 /** Composable for the topbar **/
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun TopBarGreeting(){
+fun TopBarGreeting(onMenuClick: () -> Unit){
     CenterAlignedTopAppBar(
+        navigationIcon = {
+            IconButton(onClick = onMenuClick) {
+                Icon( Icons.Filled.Menu, contentDescription = "Menu")
+            }
+        },
         title = {
             Text(
                 modifier = Modifier.fillMaxWidth(),
                 fontSize = 26.sp,
                 fontWeight = FontWeight.SemiBold,
-                textAlign = TextAlign.Center,
                 text = "Malin & Jonatans Recept"
             )
         }
